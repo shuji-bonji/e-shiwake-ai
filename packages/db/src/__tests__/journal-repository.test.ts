@@ -1,19 +1,19 @@
-import { beforeEach, describe, it, expect } from 'vitest';
+import type { JournalEntry } from '@e-shiwake/core';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { resetDatabase } from '../database.js';
-import { seedDefaultAccounts } from '../seed.js';
 import {
 	addJournal,
+	countJournalLinesByAccountCode,
+	deleteJournal,
+	deleteYearData,
+	getAllJournals,
+	getAvailableYears,
 	getJournalById,
 	getJournalsByYear,
 	updateJournal,
-	deleteJournal,
-	getAvailableYears,
-	deleteYearData,
-	getAllJournals,
-	countJournalLinesByAccountCode,
 	updateTaxCategoryByAccountCode
 } from '../repositories/journal-repository.js';
-import type { JournalEntry } from '@e-shiwake/core';
+import { seedDefaultAccounts } from '../seed.js';
 
 describe('journal-repository', () => {
 	beforeEach(() => {
@@ -357,7 +357,7 @@ describe('journal-repository', () => {
 
 			// Small delay to ensure timestamp changes
 			const startTime = Date.now();
-			while (Date.now()- startTime < 10) {
+			while (Date.now() - startTime < 10) {
 				// busy wait
 			}
 

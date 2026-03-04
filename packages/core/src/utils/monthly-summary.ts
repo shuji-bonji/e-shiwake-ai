@@ -5,14 +5,14 @@
  * 青色申告決算書2ページ目のデータを生成する
  */
 
-import type { JournalEntry, Account, JournalLine } from '../types/index.js';
 import type {
+	AccountYearlyTotal,
 	MonthlySalesData,
 	MonthlyTotals,
-	AccountYearlyTotal,
-	RentDetailRow,
-	Page2Details
+	Page2Details,
+	RentDetailRow
 } from '../types/blue-return-types.js';
+import type { Account, JournalEntry, JournalLine } from '../types/index.js';
 
 // ============================================================
 // 定数定義

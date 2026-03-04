@@ -1,19 +1,19 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
+import type { JournalLine, TaxCategory } from '../types/index.js';
 import {
-	getTaxRateFromCategory,
-	isTaxable,
-	isSalesCategory,
-	isPurchaseCategory,
-	calculateTaxExcluded,
+	calculateSimplifiedTax,
 	calculateTaxAmount,
+	calculateTaxExcluded,
 	calculateTaxIncluded,
 	calculateTaxIncludedByCategory,
-	calculateTotalTax,
 	calculateTaxSummary,
+	calculateTotalTax,
 	getSimplifiedTaxRate,
-	calculateSimplifiedTax
+	getTaxRateFromCategory,
+	isPurchaseCategory,
+	isSalesCategory,
+	isTaxable
 } from '../utils/tax.js';
-import type { JournalLine, TaxCategory } from '../types/index.js';
 
 describe('Tax Utilities', () => {
 	describe('getTaxRateFromCategory', () => {

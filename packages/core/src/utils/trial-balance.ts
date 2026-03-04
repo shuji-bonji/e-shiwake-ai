@@ -1,4 +1,4 @@
-import type { JournalEntry, Account, AccountType } from '../types/index.js';
+import type { Account, AccountType, JournalEntry } from '../types/index.js';
 
 /**
  * 試算表の1行

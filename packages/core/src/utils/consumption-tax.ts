@@ -1,4 +1,4 @@
-import type { JournalEntry, ConsumptionTaxData, ConsumptionTaxRow } from '../types/index.js';
+import type { ConsumptionTaxData, ConsumptionTaxRow, JournalEntry } from '../types/index.js';
 import { TaxCategoryLabels } from '../types/index.js';
 import { calculateTaxSummary } from './tax.js';
 

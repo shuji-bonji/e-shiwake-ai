@@ -4,46 +4,41 @@
 // ===========================================
 
 // --- Database ---
-export { getDatabase, closeDatabase, resetDatabase } from './database.js';
-
+export { closeDatabase, getDatabase, resetDatabase } from './database.js';
+export {
+	addAccount,
+	deleteAccount,
+	generateNextCode,
+	getAccountByCode,
+	getAccountsByType,
+	getAllAccounts,
+	isAccountInUse,
+	updateAccount
+} from './repositories/account-repository.js';
+export { exportYearData, importData } from './repositories/import-export.js';
 // --- Repositories ---
 export {
-	getJournalsByYear,
+	addJournal,
+	countJournalLinesByAccountCode,
+	deleteJournal,
+	deleteYearData,
 	getAllJournals,
 	getAvailableYears,
 	getJournalById,
-	addJournal,
+	getJournalsByYear,
+	searchJournals,
 	updateJournal,
-	deleteJournal,
-	countJournalLinesByAccountCode,
-	updateTaxCategoryByAccountCode,
-	deleteYearData
+	updateTaxCategoryByAccountCode
 } from './repositories/journal-repository.js';
-
 export {
-	getAllAccounts,
-	getAccountsByType,
-	getAccountByCode,
-	addAccount,
-	updateAccount,
-	deleteAccount,
-	isAccountInUse,
-	generateNextCode
-} from './repositories/account-repository.js';
-
-export {
+	deleteVendor,
 	getAllVendors,
 	getVendorById,
-	searchVendorsByName,
 	saveVendor,
-	updateVendor,
-	deleteVendor
+	searchVendorsByName,
+	updateVendor
 } from './repositories/vendor-repository.js';
-
-export { exportYearData, importData } from './repositories/import-export.js';
-
-// --- Seed ---
-export { seedDefaultAccounts } from './seed.js';
-
 // --- Schema ---
 export { initializeSchema } from './schema/init.js';
+// --- Seed ---
+export { seedDefaultAccounts } from './seed.js';

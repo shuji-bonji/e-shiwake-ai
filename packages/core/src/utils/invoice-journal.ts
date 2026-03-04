@@ -2,8 +2,8 @@
  * 請求書から仕訳を生成するユーティリティ
  */
 
-import type { Invoice } from '../types/invoice.js';
 import type { JournalEntry, JournalLine, Vendor } from '../types/index.js';
+import type { Invoice } from '../types/invoice.js';
 
 /**
  * 売掛金仕訳を生成（請求書発行時）

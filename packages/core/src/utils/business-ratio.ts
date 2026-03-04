@@ -1,5 +1,5 @@
-import type { JournalLine, Account } from '../types/index.js';
 import { OWNER_WITHDRAWAL_CODE } from '../constants/accounts.js';
+import type { Account, JournalLine } from '../types/index.js';
 
 /**
  * 按分適用のパラメータ

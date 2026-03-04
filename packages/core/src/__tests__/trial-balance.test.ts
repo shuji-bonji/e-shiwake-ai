@@ -1,10 +1,6 @@
-import { describe, it, expect } from 'vitest';
-import {
-	generateTrialBalance,
-	groupTrialBalance,
-	formatAmount,
-} from '../utils/trial-balance.js';
-import type { JournalEntry, Account } from '../types/index.js';
+import { describe, expect, it } from 'vitest';
+import type { Account, JournalEntry } from '../types/index.js';
+import { formatAmount, generateTrialBalance, groupTrialBalance } from '../utils/trial-balance.js';
 
 // Test data
 const testAccounts: Account[] = [

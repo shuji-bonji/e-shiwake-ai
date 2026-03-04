@@ -5,19 +5,19 @@
  * 青色申告決算書（一般用・4ページ）のデータを生成する
  */
 
-import type { JournalEntry, Account, ProfitLossData, BalanceSheetData } from '../types/index.js';
 import type {
+	BalanceSheetDetailRow,
 	BlueReturnData,
 	BusinessInfo,
+	ExpenseRow,
+	FixedAsset,
 	Page1ProfitLoss,
 	Page4BalanceSheet,
-	FixedAsset,
-	ExpenseRow,
-	BalanceSheetDetailRow,
 	RentDetailRow
 } from '../types/blue-return-types.js';
-import { generatePage2Details } from './monthly-summary.js';
+import type { Account, BalanceSheetData, JournalEntry, ProfitLossData } from '../types/index.js';
 import { generatePage3Depreciation } from './depreciation.js';
+import { generatePage2Details } from './monthly-summary.js';
 
 // ============================================================
 // ヘルパー関数

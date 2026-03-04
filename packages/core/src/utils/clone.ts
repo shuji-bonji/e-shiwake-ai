@@ -3,7 +3,7 @@
  * Svelte 5のリアクティブプロキシを解除しつつ、Blobを保持
  */
 
-import type { JournalEntry, Attachment } from '../types/index.js';
+import type { Attachment, JournalEntry } from '../types/index.js';
 
 /**
  * 添付ファイルをクローン（Blobを保持）

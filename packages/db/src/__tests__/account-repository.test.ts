@@ -1,18 +1,18 @@
-import { beforeEach, describe, it, expect } from 'vitest';
+import type { Account, AccountType } from '@e-shiwake/core';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { resetDatabase } from '../database.js';
-import { seedDefaultAccounts } from '../seed.js';
 import {
-	getAllAccounts,
-	getAccountsByType,
-	getAccountByCode,
 	addAccount,
-	updateAccount,
 	deleteAccount,
+	generateNextCode,
+	getAccountByCode,
+	getAccountsByType,
+	getAllAccounts,
 	isAccountInUse,
-	generateNextCode
+	updateAccount
 } from '../repositories/account-repository.js';
 import { addJournal } from '../repositories/journal-repository.js';
-import type { Account, AccountType } from '@e-shiwake/core';
+import { seedDefaultAccounts } from '../seed.js';
 
 describe('account-repository', () => {
 	beforeEach(() => {

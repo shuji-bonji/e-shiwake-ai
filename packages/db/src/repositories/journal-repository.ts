@@ -1,5 +1,57 @@
 import type { JournalEntry, JournalLine, TaxCategory } from '@e-shiwake/core';
+import type Database from 'better-sqlite3';
 import { getDatabase } from '../database.js';
+
+// ==================== Prepared Statement キャッシュ ====================
+
+/**
+ * DB インスタンスに紐づく Prepared Statement キャッシュ
+ * resetDatabase() でインスタンスが変わった場合に自動再生成
+ */
+let _cachedDb: Database.Database | null = null;
+let _stmts: ReturnType<typeof createStatements> | null = null;
+
+function createStatements(db: Database.Database) {
+	return {
+		getJournalsByYear: db.prepare(
+			'SELECT * FROM journals WHERE date BETWEEN ? AND ? ORDER BY date DESC, created_at DESC'
+		),
+		getAllJournals: db.prepare('SELECT * FROM journals ORDER BY date DESC, created_at DESC'),
+		getJournalById: db.prepare('SELECT * FROM journals WHERE id = ?'),
+		getLinesByJournalId: db.prepare('SELECT * FROM journal_lines WHERE journal_id = ?'),
+		getAvailableYears: db.prepare(
+			'SELECT DISTINCT CAST(substr(date, 1, 4) AS INTEGER) as year FROM journals ORDER BY year DESC'
+		),
+		insertJournal: db.prepare(
+			`INSERT INTO journals (id, date, vendor, description, evidence_status, created_at, updated_at)
+			VALUES (?, ?, ?, ?, ?, ?, ?)`
+		),
+		insertLine: db.prepare(
+			`INSERT INTO journal_lines (id, journal_id, type, account_code, amount, tax_category, memo,
+				_business_ratio_applied, _original_amount, _business_ratio, _business_ratio_generated)
+			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+		),
+		deleteJournal: db.prepare('DELETE FROM journals WHERE id = ?'),
+		deleteLinesByJournalId: db.prepare('DELETE FROM journal_lines WHERE journal_id = ?'),
+		countLinesByAccountCode: db.prepare(
+			'SELECT COUNT(*) as count FROM journal_lines WHERE account_code = ?'
+		),
+		deleteJournalsByDateRange: db.prepare('DELETE FROM journals WHERE date BETWEEN ? AND ?'),
+		countAttachmentsByDateRange: db.prepare(
+			`SELECT COUNT(*) as count FROM attachments WHERE journal_id IN
+			(SELECT id FROM journals WHERE date BETWEEN ? AND ?)`
+		)
+	};
+}
+
+function getStmts() {
+	const db = getDatabase();
+	if (_cachedDb !== db) {
+		_stmts = createStatements(db);
+		_cachedDb = db;
+	}
+	return { db, stmts: _stmts! };
+}
 
 // ==================== 内部ヘルパー ====================
 
@@ -56,60 +108,112 @@ function assembleJournal(row: JournalRow, lines: JournalLineRow[]): JournalEntry
 	};
 }
 
+/**
+ * 仕訳行を一括取得し journal_id でグループ化するヘルパー
+ * N+1 クエリを回避するため、IN句で一括取得する
+ */
+function bulkLoadLines(
+	db: ReturnType<typeof getDatabase>,
+	journalIds: string[]
+): Map<string, JournalLineRow[]> {
+	const lineMap = new Map<string, JournalLineRow[]>();
+	if (journalIds.length === 0) return lineMap;
+
+	// SQLite のバインドパラメータ上限（999）を考慮してチャンク分割
+	const CHUNK_SIZE = 500;
+	for (let i = 0; i < journalIds.length; i += CHUNK_SIZE) {
+		const chunk = journalIds.slice(i, i + CHUNK_SIZE);
+		const placeholders = chunk.map(() => '?').join(',');
+		const rows = db
+			.prepare(`SELECT * FROM journal_lines WHERE journal_id IN (${placeholders})`)
+			.all(...chunk) as JournalLineRow[];
+
+		for (const row of rows) {
+			const arr = lineMap.get(row.journal_id);
+			if (arr) {
+				arr.push(row);
+			} else {
+				lineMap.set(row.journal_id, [row]);
+			}
+		}
+	}
+
+	return lineMap;
+}
+
 // ==================== CRUD ====================
 
 /**
  * 仕訳の取得（年度別、日付降順）
  */
 export function getJournalsByYear(year: number): JournalEntry[] {
-	const db = getDatabase();
+	const { db, stmts } = getStmts();
 	const startDate = `${year}-01-01`;
 	const endDate = `${year}-12-31`;
 
-	const journals = db
-		.prepare(
-			'SELECT * FROM journals WHERE date BETWEEN ? AND ? ORDER BY date DESC, created_at DESC'
-		)
-		.all(startDate, endDate) as JournalRow[];
+	const journals = stmts.getJournalsByYear.all(startDate, endDate) as JournalRow[];
 
-	const lineStmt = db.prepare('SELECT * FROM journal_lines WHERE journal_id = ?');
+	const lineMap = bulkLoadLines(
+		db,
+		journals.map((j) => j.id)
+	);
 
-	return journals.map((j) => {
-		const lines = lineStmt.all(j.id) as JournalLineRow[];
-		return assembleJournal(j, lines);
-	});
+	return journals.map((j) => assembleJournal(j, lineMap.get(j.id) ?? []));
 }
 
 /**
  * 全仕訳を取得（日付降順）
  */
 export function getAllJournals(): JournalEntry[] {
-	const db = getDatabase();
+	const { db, stmts } = getStmts();
 
-	const journals = db
-		.prepare('SELECT * FROM journals ORDER BY date DESC, created_at DESC')
-		.all() as JournalRow[];
+	const journals = stmts.getAllJournals.all() as JournalRow[];
 
-	const lineStmt = db.prepare('SELECT * FROM journal_lines WHERE journal_id = ?');
+	const lineMap = bulkLoadLines(
+		db,
+		journals.map((j) => j.id)
+	);
 
-	return journals.map((j) => {
-		const lines = lineStmt.all(j.id) as JournalLineRow[];
-		return assembleJournal(j, lines);
-	});
+	return journals.map((j) => assembleJournal(j, lineMap.get(j.id) ?? []));
+}
+
+/**
+ * 仕訳を検索（摘要・取引先のテキスト部分一致、年度フィルタ対応）
+ */
+export function searchJournals(query: string, year?: number): JournalEntry[] {
+	const { db } = getStmts();
+	const like = `%${query}%`;
+
+	let sql = 'SELECT DISTINCT j.* FROM journals j WHERE (j.description LIKE ? OR j.vendor LIKE ?)';
+	const params: unknown[] = [like, like];
+
+	if (year !== undefined) {
+		const startDate = `${year}-01-01`;
+		const endDate = `${year}-12-31`;
+		sql += ' AND j.date BETWEEN ? AND ?';
+		params.push(startDate, endDate);
+	}
+
+	sql += ' ORDER BY j.date DESC, j.created_at DESC';
+
+	const journals = db.prepare(sql).all(...params) as JournalRow[];
+
+	const lineMap = bulkLoadLines(
+		db,
+		journals.map((j) => j.id)
+	);
+
+	return journals.map((j) => assembleJournal(j, lineMap.get(j.id) ?? []));
 }
 
 /**
  * 利用可能な年度の取得
  */
 export function getAvailableYears(): number[] {
-	const db = getDatabase();
+	const { stmts } = getStmts();
 	const currentYear = new Date().getFullYear();
 
-	const rows = db
-		.prepare(
-			'SELECT DISTINCT CAST(substr(date, 1, 4) AS INTEGER) as year FROM journals ORDER BY year DESC'
-		)
-		.all() as { year: number }[];
+	const rows = stmts.getAvailableYears.all() as { year: number }[];
 
 	const years = new Set<number>([currentYear]);
 	for (const row of rows) {
@@ -123,14 +227,12 @@ export function getAvailableYears(): number[] {
  * 仕訳の取得（ID指定）
  */
 export function getJournalById(id: string): JournalEntry | null {
-	const db = getDatabase();
+	const { stmts } = getStmts();
 
-	const row = db.prepare('SELECT * FROM journals WHERE id = ?').get(id) as JournalRow | undefined;
+	const row = stmts.getJournalById.get(id) as JournalRow | undefined;
 	if (!row) return null;
 
-	const lines = db
-		.prepare('SELECT * FROM journal_lines WHERE journal_id = ?')
-		.all(id) as JournalLineRow[];
+	const lines = stmts.getLinesByJournalId.all(id) as JournalLineRow[];
 	return assembleJournal(row, lines);
 }
 
@@ -138,23 +240,12 @@ export function getJournalById(id: string): JournalEntry | null {
  * 仕訳の追加
  */
 export function addJournal(journal: Omit<JournalEntry, 'id' | 'createdAt' | 'updatedAt'>): string {
-	const db = getDatabase();
+	const { db, stmts } = getStmts();
 	const now = new Date().toISOString();
 	const id = crypto.randomUUID();
 
-	const insertJournal = db.prepare(`
-		INSERT INTO journals (id, date, vendor, description, evidence_status, created_at, updated_at)
-		VALUES (?, ?, ?, ?, ?, ?, ?)
-	`);
-
-	const insertLine = db.prepare(`
-		INSERT INTO journal_lines (id, journal_id, type, account_code, amount, tax_category, memo,
-			_business_ratio_applied, _original_amount, _business_ratio, _business_ratio_generated)
-		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-	`);
-
 	const transaction = db.transaction(() => {
-		insertJournal.run(
+		stmts.insertJournal.run(
 			id,
 			journal.date,
 			journal.vendor,
@@ -165,7 +256,7 @@ export function addJournal(journal: Omit<JournalEntry, 'id' | 'createdAt' | 'upd
 		);
 
 		for (const line of journal.lines) {
-			insertLine.run(
+			stmts.insertLine.run(
 				line.id || crypto.randomUUID(),
 				id,
 				line.type,
@@ -193,11 +284,11 @@ export function updateJournal(
 	id: string,
 	updates: Partial<Omit<JournalEntry, 'id' | 'createdAt'>>
 ): void {
-	const db = getDatabase();
+	const { db, stmts } = getStmts();
 	const now = new Date().toISOString();
 
 	const transaction = db.transaction(() => {
-		// ヘッダー更新
+		// ヘッダー更新（動的SQLのためキャッシュ対象外）
 		const sets: string[] = ['updated_at = ?'];
 		const values: unknown[] = [now];
 
@@ -223,16 +314,10 @@ export function updateJournal(
 
 		// 明細行更新（全置換）
 		if (updates.lines) {
-			db.prepare('DELETE FROM journal_lines WHERE journal_id = ?').run(id);
-
-			const insertLine = db.prepare(`
-				INSERT INTO journal_lines (id, journal_id, type, account_code, amount, tax_category, memo,
-					_business_ratio_applied, _original_amount, _business_ratio, _business_ratio_generated)
-				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-			`);
+			stmts.deleteLinesByJournalId.run(id);
 
 			for (const line of updates.lines) {
-				insertLine.run(
+				stmts.insertLine.run(
 					line.id || crypto.randomUUID(),
 					id,
 					line.type,
@@ -256,19 +341,17 @@ export function updateJournal(
  * 仕訳の削除
  */
 export function deleteJournal(id: string): void {
-	const db = getDatabase();
+	const { stmts } = getStmts();
 	// CASCADE で journal_lines, attachments も自動削除
-	db.prepare('DELETE FROM journals WHERE id = ?').run(id);
+	stmts.deleteJournal.run(id);
 }
 
 /**
  * 特定の勘定科目を使用している仕訳行の数を取得
  */
 export function countJournalLinesByAccountCode(accountCode: string): number {
-	const db = getDatabase();
-	const row = db
-		.prepare('SELECT COUNT(*) as count FROM journal_lines WHERE account_code = ?')
-		.get(accountCode) as { count: number };
+	const { stmts } = getStmts();
+	const row = stmts.countLinesByAccountCode.get(accountCode) as { count: number };
 	return row.count;
 }
 
@@ -279,7 +362,7 @@ export function updateTaxCategoryByAccountCode(
 	accountCode: string,
 	newTaxCategory: TaxCategory
 ): number {
-	const db = getDatabase();
+	const { db } = getStmts();
 
 	const result = db
 		.prepare(
@@ -301,20 +384,15 @@ export function updateTaxCategoryByAccountCode(
  * 年度の全データを削除
  */
 export function deleteYearData(year: number): { journalCount: number; attachmentCount: number } {
-	const db = getDatabase();
+	const { stmts } = getStmts();
 	const startDate = `${year}-01-01`;
 	const endDate = `${year}-12-31`;
 
 	const attachmentCount = (
-		db
-			.prepare(`SELECT COUNT(*) as count FROM attachments WHERE journal_id IN
-			(SELECT id FROM journals WHERE date BETWEEN ? AND ?)`)
-			.get(startDate, endDate) as { count: number }
+		stmts.countAttachmentsByDateRange.get(startDate, endDate) as { count: number }
 	).count;
 
-	const result = db
-		.prepare('DELETE FROM journals WHERE date BETWEEN ? AND ?')
-		.run(startDate, endDate);
+	const result = stmts.deleteJournalsByDateRange.run(startDate, endDate);
 
 	return { journalCount: result.changes, attachmentCount };
 }

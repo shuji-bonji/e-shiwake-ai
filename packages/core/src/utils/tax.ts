@@ -4,7 +4,7 @@
  * 税込経理を前提とした計算ヘルパー関数群
  */
 
-import type { TaxCategory, TaxRate, JournalLine } from '../types/index.js';
+import type { JournalLine, TaxCategory, TaxRate } from '../types/index.js';
 
 /**
  * 税区分から税率を取得

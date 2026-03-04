@@ -1,11 +1,11 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
+import type { Account, JournalEntry } from '../types/index.js';
 import {
-	parseSearchQuery,
 	filterJournals,
 	isEmptyQuery,
+	parseSearchQuery,
 	type SearchCriteria
 } from '../utils/journal-search.js';
-import type { JournalEntry, Account } from '../types/index.js';
 
 // Test data
 const testAccounts: Account[] = [

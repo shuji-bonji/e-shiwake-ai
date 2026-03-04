@@ -1,4 +1,4 @@
-import type { JournalEntry, Account, BalanceSheetData, BalanceSheetRow } from '../types/index.js';
+import type { Account, BalanceSheetData, BalanceSheetRow, JournalEntry } from '../types/index.js';
 
 /**
  * 固定資産に該当する勘定科目コード

@@ -1,6 +1,6 @@
-import { describe, it, expect } from 'vitest';
-import { generateProfitLoss, formatPLAmount, profitLossToCsv } from '../utils/profit-loss.js';
-import type { JournalEntry, Account } from '../types/index.js';
+import { describe, expect, it } from 'vitest';
+import type { Account, JournalEntry } from '../types/index.js';
+import { formatPLAmount, generateProfitLoss, profitLossToCsv } from '../utils/profit-loss.js';
 
 // Test data
 const testAccounts: Account[] = [

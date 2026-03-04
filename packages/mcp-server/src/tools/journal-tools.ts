@@ -1,18 +1,20 @@
 /**
  * 仕訳関連のMCPツール定義
  */
-import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { z } from 'zod';
+
+import type { JournalLine, TaxCategory } from '@e-shiwake/core';
 import {
-	getJournalsByYear,
+	addJournal,
+	deleteJournal,
+	deleteYearData,
 	getAvailableYears,
 	getJournalById,
-	addJournal,
-	updateJournal,
-	deleteJournal,
-	deleteYearData
+	getJournalsByYear,
+	searchJournals,
+	updateJournal
 } from '@e-shiwake/db';
-import type { TaxCategory, JournalLine } from '@e-shiwake/core';
+import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
+import { z } from 'zod';
 
 // ==================== Zod スキーマ ====================
 
@@ -64,6 +66,19 @@ const FiscalYearSchema = z
 const JournalIdSchema = z
 	.object({
 		id: z.string().describe('仕訳ID（UUID）')
+	})
+	.strict();
+
+const SearchJournalsSchema = z
+	.object({
+		query: z.string().min(1).describe('検索キーワード（摘要・取引先の部分一致）'),
+		fiscalYear: z
+			.number()
+			.int()
+			.min(2000)
+			.max(2100)
+			.optional()
+			.describe('年度でフィルタ（省略で全年度）')
 	})
 	.strict();
 
@@ -189,6 +204,80 @@ Returns:
 
 				const lines = [
 					`# ${params.fiscalYear}年度 仕訳一覧（${journals.length}件）`,
+					'',
+					'| 日付 | 摘要 | 取引先 | 借方計 | 貸方計 | 証跡 |',
+					'|---|---|---|---:|---:|---|'
+				];
+
+				for (const j of journals) {
+					const debitSum = j.lines
+						.filter((l) => l.type === 'debit')
+						.reduce((s, l) => s + l.amount, 0);
+					const creditSum = j.lines
+						.filter((l) => l.type === 'credit')
+						.reduce((s, l) => s + l.amount, 0);
+					lines.push(
+						`| ${j.date} | ${j.description} | ${j.vendor} | ${debitSum.toLocaleString()} | ${creditSum.toLocaleString()} | ${j.evidenceStatus} |`
+					);
+				}
+
+				return { content: [{ type: 'text' as const, text: lines.join('\n') }] };
+			} catch (error) {
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
+			}
+		}
+	);
+
+	// --- 仕訳検索 ---
+	server.registerTool(
+		'eshiwake_search_journals',
+		{
+			title: '仕訳検索',
+			description: `仕訳を検索する。摘要・取引先のテキスト部分一致で検索。年度フィルタも可能。
+
+Args:
+  - query (string): 検索キーワード（摘要・取引先の部分一致）
+  - fiscalYear (number, optional): 年度でフィルタ（省略で全年度検索）
+
+Returns:
+  検索にマッチした仕訳の一覧
+
+Examples:
+  - query="Amazon" → Amazonとの全取引を検索
+  - query="電車", fiscalYear=2025 → 2025年度の電車関連仕訳を検索`,
+			inputSchema: SearchJournalsSchema,
+			annotations: {
+				readOnlyHint: true,
+				destructiveHint: false,
+				idempotentHint: true,
+				openWorldHint: false
+			}
+		},
+		async (params) => {
+			try {
+				const journals = searchJournals(params.query, params.fiscalYear);
+				if (journals.length === 0) {
+					const yearInfo = params.fiscalYear ? `${params.fiscalYear}年度で` : '';
+					return {
+						content: [
+							{
+								type: 'text' as const,
+								text: `${yearInfo}「${params.query}」に一致する仕訳は見つかりませんでした。`
+							}
+						]
+					};
+				}
+
+				const yearInfo = params.fiscalYear ? ` (${params.fiscalYear}年度)` : ' (全年度)';
+				const lines = [
+					`# 検索結果: 「${params.query}」${yearInfo}（${journals.length}件）`,
 					'',
 					'| 日付 | 摘要 | 取引先 | 借方計 | 貸方計 | 証跡 |',
 					'|---|---|---|---:|---:|---|'

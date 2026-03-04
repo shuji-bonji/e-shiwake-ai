@@ -1,14 +1,14 @@
-import { beforeEach, describe, it, expect } from 'vitest';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { resetDatabase } from '../database.js';
-import { seedDefaultAccounts } from '../seed.js';
 import {
+	deleteVendor,
 	getAllVendors,
 	getVendorById,
-	searchVendorsByName,
 	saveVendor,
-	updateVendor,
-	deleteVendor
+	searchVendorsByName,
+	updateVendor
 } from '../repositories/vendor-repository.js';
+import { seedDefaultAccounts } from '../seed.js';
 
 describe('vendor-repository', () => {
 	beforeEach(() => {
@@ -290,7 +290,7 @@ describe('vendor-repository', () => {
 
 			// Small delay
 			const startTime = Date.now();
-			while (Date.now()- startTime < 10) {
+			while (Date.now() - startTime < 10) {
 				// busy wait
 			}
 

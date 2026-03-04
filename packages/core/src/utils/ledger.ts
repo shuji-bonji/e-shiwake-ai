@@ -1,4 +1,4 @@
-import type { JournalEntry, Account } from '../types/index.js';
+import type { Account, JournalEntry } from '../types/index.js';
 
 /**
  * 元帳の1行

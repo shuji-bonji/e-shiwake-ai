@@ -151,8 +151,10 @@ export function initializeSchema(db: Database.Database): void {
 
 		-- インデックス
 		CREATE INDEX IF NOT EXISTS idx_journals_date ON journals(date);
+		CREATE INDEX IF NOT EXISTS idx_journals_vendor ON journals(vendor);
 		CREATE INDEX IF NOT EXISTS idx_journal_lines_journal_id ON journal_lines(journal_id);
 		CREATE INDEX IF NOT EXISTS idx_journal_lines_account_code ON journal_lines(account_code);
+		CREATE INDEX IF NOT EXISTS idx_journal_lines_type_account ON journal_lines(type, account_code);
 		CREATE INDEX IF NOT EXISTS idx_attachments_journal_id ON attachments(journal_id);
 		CREATE INDEX IF NOT EXISTS idx_invoice_items_invoice_id ON invoice_items(invoice_id);
 		CREATE INDEX IF NOT EXISTS idx_vendors_name ON vendors(name);

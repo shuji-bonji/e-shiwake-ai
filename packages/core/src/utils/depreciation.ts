@@ -6,9 +6,9 @@
  */
 
 import type {
-	FixedAsset,
 	DepreciationAssetRow,
 	DepreciationMethod,
+	FixedAsset,
 	Page3Depreciation
 } from '../types/blue-return-types.js';
 

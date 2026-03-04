@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 /**
  * e-shiwake MCP Server
  *
@@ -12,13 +13,13 @@
  * - 帳簿レポート（eshiwake_trial_balance, eshiwake_profit_loss, etc.）
  */
 
+import { getDatabase, seedDefaultAccounts } from '@e-shiwake/db';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
-import { getDatabase, seedDefaultAccounts } from '@e-shiwake/db';
-import { registerJournalTools } from './tools/journal-tools.js';
 import { registerAccountTools } from './tools/account-tools.js';
-import { registerVendorTools } from './tools/vendor-tools.js';
+import { registerJournalTools } from './tools/journal-tools.js';
 import { registerReportTools } from './tools/report-tools.js';
+import { registerVendorTools } from './tools/vendor-tools.js';
 
 // ==================== サーバー初期化 ====================
 

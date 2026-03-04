@@ -1,4 +1,4 @@
-import type { JournalEntry, Account, ProfitLossData, ProfitLossRow } from '../types/index.js';
+import type { Account, JournalEntry, ProfitLossData, ProfitLossRow } from '../types/index.js';
 
 /**
  * 売上原価に該当する勘定科目コード

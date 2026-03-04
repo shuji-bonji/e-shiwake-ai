@@ -1,5 +1,5 @@
-import BetterSqlite3 from 'better-sqlite3';
 import type Database from 'better-sqlite3';
+import BetterSqlite3 from 'better-sqlite3';
 import { initializeSchema } from './schema/init.js';
 
 let _db: Database.Database | null = null;
