@@ -68,6 +68,22 @@ pnpm run build
 }
 ```
 
+### トラブルシューティング: Node.js バージョン不一致
+
+`better-sqlite3` はネイティブモジュールのため、ビルド時と実行時の Node.js バージョンが一致している必要があります。Claude Desktop が異なるバージョンの Node.js を使用している場合、以下のようなエラーが発生します：
+
+```
+NODE_MODULE_VERSION 127. This version of Node.js requires NODE_MODULE_VERSION 115.
+```
+
+**対処法**: `claude_desktop_config.json` で `pnpm install` 時と同じ Node.js バイナリの絶対パスを指定：
+
+```json
+"command": "/path/to/.nvm/versions/node/v22.x.x/bin/node"
+```
+
+> **注意**: `"command": "node"` だけでは、ビルド時と異なるバージョンの Node.js が使われる場合があります。絶対パスの指定を推奨します。
+
 ### 動作確認
 
 Claude Desktop を再起動後、e-shiwake のツールが利用可能になります。以下のように話しかけてみてください。

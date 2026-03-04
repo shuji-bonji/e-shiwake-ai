@@ -68,6 +68,22 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
+### Troubleshooting: Node.js Version Mismatch
+
+`better-sqlite3` is a native module that must be compiled for the same Node.js version used at runtime. If Claude Desktop uses a different Node.js version than the one used during `pnpm install`, you'll see an error like:
+
+```
+NODE_MODULE_VERSION 127. This version of Node.js requires NODE_MODULE_VERSION 115.
+```
+
+**Fix**: Specify the absolute path to the same Node.js binary used during `pnpm install`:
+
+```json
+"command": "/path/to/.nvm/versions/node/v22.x.x/bin/node"
+```
+
+> **Note**: Using just `"command": "node"` may resolve to a different Node.js version than the one used to build the native modules. Always use the absolute path to ensure version consistency.
+
 ### Verify
 
 After restarting Claude Desktop, you should see e-shiwake tools available. Try:
