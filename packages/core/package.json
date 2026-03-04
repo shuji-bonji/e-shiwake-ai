@@ -1,24 +1,24 @@
 {
-  "name": "@e-shiwake/core",
-  "version": "0.1.0",
-  "description": "e-shiwake core business logic - types, accounting calculations, tax utilities",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
-  "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf dist *.tsbuildinfo",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run"
-  },
-  "devDependencies": {
-    "typescript": "^5.7.2",
-    "vitest": "^3.0.0"
-  }
+	"name": "@e-shiwake/core",
+	"version": "0.1.0",
+	"description": "e-shiwake core business logic - types, accounting calculations, tax utilities",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"clean": "rm -rf dist *.tsbuildinfo",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"devDependencies": {
+		"typescript": "^5.7.2",
+		"vitest": "^3.0.0"
+	}
 }

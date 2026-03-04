@@ -19,33 +19,47 @@ import type { AccountType, TaxCategory } from '@e-shiwake/core';
 
 const AccountTypeEnum = z.enum(['asset', 'liability', 'equity', 'revenue', 'expense']);
 
-const ListAccountsSchema = z.object({
-	type: AccountTypeEnum.optional().describe('勘定科目タイプでフィルタ（省略で全件取得）')
-}).strict();
+const ListAccountsSchema = z
+	.object({
+		type: AccountTypeEnum.optional().describe('勘定科目タイプでフィルタ（省略で全件取得）')
+	})
+	.strict();
 
-const AccountCodeSchema = z.object({
-	code: z.string().regex(/^\d{4}$/, '4桁の数字で入力してください').describe('勘定科目コード（4桁）')
-}).strict();
+const AccountCodeSchema = z
+	.object({
+		code: z
+			.string()
+			.regex(/^\d{4}$/, '4桁の数字で入力してください')
+			.describe('勘定科目コード（4桁）')
+	})
+	.strict();
 
-const CreateAccountSchema = z.object({
-	type: AccountTypeEnum.describe('勘定科目タイプ（asset/liability/equity/revenue/expense）'),
-	name: z.string().min(1).max(50).describe('勘定科目名'),
-	defaultTaxCategory: z.enum([
-		'sales_10', 'sales_8', 'purchase_10', 'purchase_8',
-		'exempt', 'out_of_scope', 'na'
-	]).optional().describe('デフォルト消費税区分')
-}).strict();
+const CreateAccountSchema = z
+	.object({
+		type: AccountTypeEnum.describe('勘定科目タイプ（asset/liability/equity/revenue/expense）'),
+		name: z.string().min(1).max(50).describe('勘定科目名'),
+		defaultTaxCategory: z
+			.enum(['sales_10', 'sales_8', 'purchase_10', 'purchase_8', 'exempt', 'out_of_scope', 'na'])
+			.optional()
+			.describe('デフォルト消費税区分')
+	})
+	.strict();
 
-const UpdateAccountSchema = z.object({
-	code: z.string().regex(/^\d{4}$/).describe('更新対象の勘定科目コード'),
-	name: z.string().min(1).max(50).optional().describe('勘定科目名'),
-	defaultTaxCategory: z.enum([
-		'sales_10', 'sales_8', 'purchase_10', 'purchase_8',
-		'exempt', 'out_of_scope', 'na'
-	]).optional().describe('デフォルト消費税区分'),
-	businessRatioEnabled: z.boolean().optional().describe('家事按分を有効にするか'),
-	defaultBusinessRatio: z.number().min(0).max(100).optional().describe('デフォルト按分率（%）')
-}).strict();
+const UpdateAccountSchema = z
+	.object({
+		code: z
+			.string()
+			.regex(/^\d{4}$/)
+			.describe('更新対象の勘定科目コード'),
+		name: z.string().min(1).max(50).optional().describe('勘定科目名'),
+		defaultTaxCategory: z
+			.enum(['sales_10', 'sales_8', 'purchase_10', 'purchase_8', 'exempt', 'out_of_scope', 'na'])
+			.optional()
+			.describe('デフォルト消費税区分'),
+		businessRatioEnabled: z.boolean().optional().describe('家事按分を有効にするか'),
+		defaultBusinessRatio: z.number().min(0).max(100).optional().describe('デフォルト按分率（%）')
+	})
+	.strict();
 
 // ==================== ヘルパー ====================
 
@@ -60,7 +74,6 @@ const TYPE_LABELS: Record<string, string> = {
 // ==================== ツール登録 ====================
 
 export function registerAccountTools(server: McpServer): void {
-
 	// --- 勘定科目一覧 ---
 	server.registerTool(
 		'eshiwake_list_accounts',
@@ -113,7 +126,14 @@ Returns:
 
 				return { content: [{ type: 'text' as const, text: lines.join('\n') }] };
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -142,7 +162,14 @@ Returns:
 			try {
 				const account = getAccountByCode(params.code);
 				if (!account) {
-					return { content: [{ type: 'text' as const, text: `科目コード "${params.code}" が見つかりませんでした。` }] };
+					return {
+						content: [
+							{
+								type: 'text' as const,
+								text: `科目コード "${params.code}" が見つかりませんでした。`
+							}
+						]
+					};
 				}
 
 				const inUse = isAccountInUse(params.code);
@@ -163,7 +190,14 @@ Returns:
 
 				return { content: [{ type: 'text' as const, text: lines.join('\n') }] };
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -194,23 +228,32 @@ Returns:
 		async (params) => {
 			try {
 				const code = generateNextCode(params.type as AccountType);
-				const accountId = addAccount({
+				const _accountId = addAccount({
 					code,
 					name: params.name,
 					type: params.type as AccountType,
 					defaultTaxCategory: params.defaultTaxCategory as TaxCategory | undefined
 				});
 
-				const account = getAccountByCode(code);
+				const _account = getAccountByCode(code);
 
 				return {
-					content: [{
-						type: 'text' as const,
-						text: `勘定科目を追加しました: ${code} ${params.name}（${TYPE_LABELS[params.type]}）`
-					}]
+					content: [
+						{
+							type: 'text' as const,
+							text: `勘定科目を追加しました: ${code} ${params.name}（${TYPE_LABELS[params.type]}）`
+						}
+					]
 				};
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -241,7 +284,14 @@ Returns:
 			try {
 				const existing = getAccountByCode(params.code);
 				if (!existing) {
-					return { content: [{ type: 'text' as const, text: `科目コード "${params.code}" が見つかりませんでした。` }] };
+					return {
+						content: [
+							{
+								type: 'text' as const,
+								text: `科目コード "${params.code}" が見つかりませんでした。`
+							}
+						]
+					};
 				}
 
 				updateAccount(params.code, {
@@ -252,13 +302,22 @@ Returns:
 				});
 
 				return {
-					content: [{
-						type: 'text' as const,
-						text: `勘定科目を更新しました: ${params.code} ${params.name ?? existing.name}`
-					}]
+					content: [
+						{
+							type: 'text' as const,
+							text: `勘定科目を更新しました: ${params.code} ${params.name ?? existing.name}`
+						}
+					]
 				};
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -288,26 +347,53 @@ Returns:
 			try {
 				const existing = getAccountByCode(params.code);
 				if (!existing) {
-					return { content: [{ type: 'text' as const, text: `科目コード "${params.code}" が見つかりませんでした。` }] };
+					return {
+						content: [
+							{
+								type: 'text' as const,
+								text: `科目コード "${params.code}" が見つかりませんでした。`
+							}
+						]
+					};
 				}
 
 				if (existing.isSystem) {
-					return { content: [{ type: 'text' as const, text: `システム科目 "${existing.name}" は削除できません。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `システム科目 "${existing.name}" は削除できません。` }
+						]
+					};
 				}
 
 				if (isAccountInUse(params.code)) {
-					return { content: [{ type: 'text' as const, text: `科目 "${existing.name}" は仕訳で使用中のため削除できません。` }] };
+					return {
+						content: [
+							{
+								type: 'text' as const,
+								text: `科目 "${existing.name}" は仕訳で使用中のため削除できません。`
+							}
+						]
+					};
 				}
 
 				deleteAccount(params.code);
 				return {
-					content: [{
-						type: 'text' as const,
-						text: `勘定科目を削除しました: ${params.code} ${existing.name}`
-					}]
+					content: [
+						{
+							type: 'text' as const,
+							text: `勘定科目を削除しました: ${params.code} ${existing.name}`
+						}
+					]
 				};
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);

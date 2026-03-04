@@ -67,7 +67,9 @@ export function getJournalsByYear(year: number): JournalEntry[] {
 	const endDate = `${year}-12-31`;
 
 	const journals = db
-		.prepare('SELECT * FROM journals WHERE date BETWEEN ? AND ? ORDER BY date DESC, created_at DESC')
+		.prepare(
+			'SELECT * FROM journals WHERE date BETWEEN ? AND ? ORDER BY date DESC, created_at DESC'
+		)
 		.all(startDate, endDate) as JournalRow[];
 
 	const lineStmt = db.prepare('SELECT * FROM journal_lines WHERE journal_id = ?');
@@ -104,7 +106,9 @@ export function getAvailableYears(): number[] {
 	const currentYear = new Date().getFullYear();
 
 	const rows = db
-		.prepare("SELECT DISTINCT CAST(substr(date, 1, 4) AS INTEGER) as year FROM journals ORDER BY year DESC")
+		.prepare(
+			'SELECT DISTINCT CAST(substr(date, 1, 4) AS INTEGER) as year FROM journals ORDER BY year DESC'
+		)
 		.all() as { year: number }[];
 
 	const years = new Set<number>([currentYear]);
@@ -118,22 +122,22 @@ export function getAvailableYears(): number[] {
 /**
  * 仕訳の取得（ID指定）
  */
-export function getJournalById(id: string): JournalEntry | undefined {
+export function getJournalById(id: string): JournalEntry | null {
 	const db = getDatabase();
 
 	const row = db.prepare('SELECT * FROM journals WHERE id = ?').get(id) as JournalRow | undefined;
-	if (!row) return undefined;
+	if (!row) return null;
 
-	const lines = db.prepare('SELECT * FROM journal_lines WHERE journal_id = ?').all(id) as JournalLineRow[];
+	const lines = db
+		.prepare('SELECT * FROM journal_lines WHERE journal_id = ?')
+		.all(id) as JournalLineRow[];
 	return assembleJournal(row, lines);
 }
 
 /**
  * 仕訳の追加
  */
-export function addJournal(
-	journal: Omit<JournalEntry, 'id' | 'createdAt' | 'updatedAt'>
-): string {
+export function addJournal(journal: Omit<JournalEntry, 'id' | 'createdAt' | 'updatedAt'>): string {
 	const db = getDatabase();
 	const now = new Date().toISOString();
 	const id = crypto.randomUUID();
@@ -150,7 +154,15 @@ export function addJournal(
 	`);
 
 	const transaction = db.transaction(() => {
-		insertJournal.run(id, journal.date, journal.vendor, journal.description, journal.evidenceStatus, now, now);
+		insertJournal.run(
+			id,
+			journal.date,
+			journal.vendor,
+			journal.description,
+			journal.evidenceStatus,
+			now,
+			now
+		);
 
 		for (const line of journal.lines) {
 			insertLine.run(
@@ -189,10 +201,22 @@ export function updateJournal(
 		const sets: string[] = ['updated_at = ?'];
 		const values: unknown[] = [now];
 
-		if (updates.date !== undefined) { sets.push('date = ?'); values.push(updates.date); }
-		if (updates.vendor !== undefined) { sets.push('vendor = ?'); values.push(updates.vendor); }
-		if (updates.description !== undefined) { sets.push('description = ?'); values.push(updates.description); }
-		if (updates.evidenceStatus !== undefined) { sets.push('evidence_status = ?'); values.push(updates.evidenceStatus); }
+		if (updates.date !== undefined) {
+			sets.push('date = ?');
+			values.push(updates.date);
+		}
+		if (updates.vendor !== undefined) {
+			sets.push('vendor = ?');
+			values.push(updates.vendor);
+		}
+		if (updates.description !== undefined) {
+			sets.push('description = ?');
+			values.push(updates.description);
+		}
+		if (updates.evidenceStatus !== undefined) {
+			sets.push('evidence_status = ?');
+			values.push(updates.evidenceStatus);
+		}
 
 		values.push(id);
 		db.prepare(`UPDATE journals SET ${sets.join(', ')} WHERE id = ?`).run(...values);
@@ -258,7 +282,9 @@ export function updateTaxCategoryByAccountCode(
 	const db = getDatabase();
 
 	const result = db
-		.prepare('UPDATE journal_lines SET tax_category = ? WHERE account_code = ? AND (tax_category IS NULL OR tax_category != ?)')
+		.prepare(
+			'UPDATE journal_lines SET tax_category = ? WHERE account_code = ? AND (tax_category IS NULL OR tax_category != ?)'
+		)
 		.run(newTaxCategory, accountCode, newTaxCategory);
 
 	// 更新された行を持つ仕訳の updated_at も更新
@@ -279,10 +305,12 @@ export function deleteYearData(year: number): { journalCount: number; attachment
 	const startDate = `${year}-01-01`;
 	const endDate = `${year}-12-31`;
 
-	const attachmentCount = (db
-		.prepare(`SELECT COUNT(*) as count FROM attachments WHERE journal_id IN
+	const attachmentCount = (
+		db
+			.prepare(`SELECT COUNT(*) as count FROM attachments WHERE journal_id IN
 			(SELECT id FROM journals WHERE date BETWEEN ? AND ?)`)
-		.get(startDate, endDate) as { count: number }).count;
+			.get(startDate, endDate) as { count: number }
+	).count;
 
 	const result = db
 		.prepare('DELETE FROM journals WHERE date BETWEEN ? AND ?')

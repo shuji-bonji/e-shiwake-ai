@@ -61,7 +61,7 @@ export function seedDefaultAccounts(): void {
 		['5020', '新聞図書費', 'expense', 'purchase_10'],
 		['5021', '研修費', 'expense', 'purchase_10'],
 		['5022', '支払手数料', 'expense', 'purchase_10'],
-		['5023', '諸会費', 'expense', 'out_of_scope'],
+		['5023', '諸会費', 'expense', 'out_of_scope']
 	];
 
 	const transaction = db.transaction(() => {

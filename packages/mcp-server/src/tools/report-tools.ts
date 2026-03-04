@@ -4,11 +4,7 @@
  */
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
-import {
-	getJournalsByYear,
-	getAllAccounts,
-	exportYearData
-} from '@e-shiwake/db';
+import { getJournalsByYear, getAllAccounts, exportYearData } from '@e-shiwake/db';
 import {
 	generateTrialBalance,
 	groupTrialBalance,
@@ -20,14 +16,15 @@ import {
 
 // ==================== Zod スキーマ ====================
 
-const FiscalYearSchema = z.object({
-	fiscalYear: z.number().int().min(2000).max(2100).describe('会計年度（例: 2025）')
-}).strict();
+const FiscalYearSchema = z
+	.object({
+		fiscalYear: z.number().int().min(2000).max(2100).describe('会計年度（例: 2025）')
+	})
+	.strict();
 
 // ==================== ツール登録 ====================
 
 export function registerReportTools(server: McpServer): void {
-
 	// --- 試算表 ---
 	server.registerTool(
 		'eshiwake_trial_balance',
@@ -56,7 +53,11 @@ Returns:
 				const accounts = getAllAccounts();
 
 				if (journals.length === 0) {
-					return { content: [{ type: 'text' as const, text: `${params.fiscalYear}年度の仕訳がありません。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `${params.fiscalYear}年度の仕訳がありません。` }
+						]
+					};
 				}
 
 				const data = generateTrialBalance(journals, accounts);
@@ -91,12 +92,23 @@ Returns:
 				lines.push('');
 				lines.push('| 項目 | 借方 | 貸方 |');
 				lines.push('|---|---:|---:|');
-				lines.push(`| 合計 | ${formatAmount(data.totalDebit)} | ${formatAmount(data.totalCredit)} |`);
-				lines.push(`| 残高 | ${formatAmount(data.totalDebitBalance)} | ${formatAmount(data.totalCreditBalance)} |`);
+				lines.push(
+					`| 合計 | ${formatAmount(data.totalDebit)} | ${formatAmount(data.totalCredit)} |`
+				);
+				lines.push(
+					`| 残高 | ${formatAmount(data.totalDebitBalance)} | ${formatAmount(data.totalCreditBalance)} |`
+				);
 
 				return { content: [{ type: 'text' as const, text: lines.join('\n') }] };
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -128,15 +140,16 @@ Returns:
 				const accounts = getAllAccounts();
 
 				if (journals.length === 0) {
-					return { content: [{ type: 'text' as const, text: `${params.fiscalYear}年度の仕訳がありません。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `${params.fiscalYear}年度の仕訳がありません。` }
+						]
+					};
 				}
 
 				const pl = generateProfitLoss(journals, accounts, params.fiscalYear);
 
-				const lines = [
-					`# 損益計算書 ${params.fiscalYear}年度`,
-					''
-				];
+				const lines = [`# 損益計算書 ${params.fiscalYear}年度`, ''];
 
 				// 収益
 				lines.push('## 収益');
@@ -181,7 +194,14 @@ Returns:
 
 				return { content: [{ type: 'text' as const, text: lines.join('\n') }] };
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -213,7 +233,11 @@ Returns:
 				const accounts = getAllAccounts();
 
 				if (journals.length === 0) {
-					return { content: [{ type: 'text' as const, text: `${params.fiscalYear}年度の仕訳がありません。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `${params.fiscalYear}年度の仕訳がありません。` }
+						]
+					};
 				}
 
 				const bs = generateBalanceSheet(journals, accounts, params.fiscalYear);
@@ -279,7 +303,14 @@ Returns:
 
 				return { content: [{ type: 'text' as const, text: lines.join('\n') }] };
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -310,11 +341,15 @@ Returns:
 				const journals = getJournalsByYear(params.fiscalYear);
 
 				if (journals.length === 0) {
-					return { content: [{ type: 'text' as const, text: `${params.fiscalYear}年度の仕訳がありません。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `${params.fiscalYear}年度の仕訳がありません。` }
+						]
+					};
 				}
 
 				// Flatten all journal lines
-				const allLines = journals.flatMap(j => j.lines);
+				const allLines = journals.flatMap((j) => j.lines);
 				const tax = calculateTaxSummary(allLines);
 
 				const lines = [
@@ -349,7 +384,14 @@ Returns:
 
 				return { content: [{ type: 'text' as const, text: lines.join('\n') }] };
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -395,7 +437,14 @@ Returns:
 
 				return { content: [{ type: 'text' as const, text: summary.join('\n') }] };
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);

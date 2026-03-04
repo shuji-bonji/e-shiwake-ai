@@ -5,7 +5,6 @@ import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
 import {
 	getJournalsByYear,
-	getAllJournals,
 	getAvailableYears,
 	getJournalById,
 	addJournal,
@@ -21,37 +20,52 @@ const JournalLineSchema = z.object({
 	type: z.enum(['debit', 'credit']).describe('借方(debit) or 貸方(credit)'),
 	accountCode: z.string().describe('勘定科目コード（4桁, 例: "5001"）'),
 	amount: z.number().int().min(1).describe('金額（正の整数）'),
-	taxCategory: z.enum([
-		'sales_10', 'sales_8', 'purchase_10', 'purchase_8',
-		'exempt', 'out_of_scope', 'na'
-	]).optional().describe('消費税区分'),
+	taxCategory: z
+		.enum(['sales_10', 'sales_8', 'purchase_10', 'purchase_8', 'exempt', 'out_of_scope', 'na'])
+		.optional()
+		.describe('消費税区分'),
 	memo: z.string().optional().describe('行メモ（按分理由など）')
 });
 
-const CreateJournalSchema = z.object({
-	date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'YYYY-MM-DD形式で入力してください').describe('取引日（YYYY-MM-DD）'),
-	lines: z.array(JournalLineSchema).min(2).describe('仕訳明細行（借方・貸方それぞれ1行以上）'),
-	vendor: z.string().min(1).describe('取引先名'),
-	description: z.string().min(1).describe('摘要'),
-	evidenceStatus: z.enum(['none', 'paper', 'digital']).default('none').describe('証跡ステータス')
-}).strict();
+const CreateJournalSchema = z
+	.object({
+		date: z
+			.string()
+			.regex(/^\d{4}-\d{2}-\d{2}$/, 'YYYY-MM-DD形式で入力してください')
+			.describe('取引日（YYYY-MM-DD）'),
+		lines: z.array(JournalLineSchema).min(2).describe('仕訳明細行（借方・貸方それぞれ1行以上）'),
+		vendor: z.string().min(1).describe('取引先名'),
+		description: z.string().min(1).describe('摘要'),
+		evidenceStatus: z.enum(['none', 'paper', 'digital']).default('none').describe('証跡ステータス')
+	})
+	.strict();
 
-const UpdateJournalSchema = z.object({
-	id: z.string().describe('仕訳ID（UUID）'),
-	date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional().describe('取引日（YYYY-MM-DD）'),
-	lines: z.array(JournalLineSchema).min(2).optional().describe('仕訳明細行'),
-	vendor: z.string().min(1).optional().describe('取引先名'),
-	description: z.string().min(1).optional().describe('摘要'),
-	evidenceStatus: z.enum(['none', 'paper', 'digital']).optional().describe('証跡ステータス')
-}).strict();
+const UpdateJournalSchema = z
+	.object({
+		id: z.string().describe('仕訳ID（UUID）'),
+		date: z
+			.string()
+			.regex(/^\d{4}-\d{2}-\d{2}$/)
+			.optional()
+			.describe('取引日（YYYY-MM-DD）'),
+		lines: z.array(JournalLineSchema).min(2).optional().describe('仕訳明細行'),
+		vendor: z.string().min(1).optional().describe('取引先名'),
+		description: z.string().min(1).optional().describe('摘要'),
+		evidenceStatus: z.enum(['none', 'paper', 'digital']).optional().describe('証跡ステータス')
+	})
+	.strict();
 
-const FiscalYearSchema = z.object({
-	fiscalYear: z.number().int().min(2000).max(2100).describe('会計年度（例: 2025）')
-}).strict();
+const FiscalYearSchema = z
+	.object({
+		fiscalYear: z.number().int().min(2000).max(2100).describe('会計年度（例: 2025）')
+	})
+	.strict();
 
-const JournalIdSchema = z.object({
-	id: z.string().describe('仕訳ID（UUID）')
-}).strict();
+const JournalIdSchema = z
+	.object({
+		id: z.string().describe('仕訳ID（UUID）')
+	})
+	.strict();
 
 // ==================== ヘルパー ====================
 
@@ -77,15 +91,17 @@ function formatJournalMarkdown(journal: ReturnType<typeof getJournalById>): stri
 
 	for (const line of journal.lines) {
 		const typeLabel = line.type === 'debit' ? '借方' : '貸方';
-		lines.push(`| ${typeLabel} | ${line.accountCode} | ${line.amount.toLocaleString()} | ${line.taxCategory ?? '-'} | ${line.memo ?? '-'} |`);
+		lines.push(
+			`| ${typeLabel} | ${line.accountCode} | ${line.amount.toLocaleString()} | ${line.taxCategory ?? '-'} | ${line.memo ?? '-'} |`
+		);
 	}
 
 	return lines.join('\n');
 }
 
 function validateDebitCreditBalance(lines: Array<{ type: string; amount: number }>): string | null {
-	const debitSum = lines.filter(l => l.type === 'debit').reduce((s, l) => s + l.amount, 0);
-	const creditSum = lines.filter(l => l.type === 'credit').reduce((s, l) => s + l.amount, 0);
+	const debitSum = lines.filter((l) => l.type === 'debit').reduce((s, l) => s + l.amount, 0);
+	const creditSum = lines.filter((l) => l.type === 'credit').reduce((s, l) => s + l.amount, 0);
 	if (debitSum !== creditSum) {
 		return `借方合計(${debitSum})と貸方合計(${creditSum})が一致しません。`;
 	}
@@ -95,7 +111,6 @@ function validateDebitCreditBalance(lines: Array<{ type: string; amount: number 
 // ==================== ツール登録 ====================
 
 export function registerJournalTools(server: McpServer): void {
-
 	// --- 年度一覧取得 ---
 	server.registerTool(
 		'eshiwake_list_fiscal_years',
@@ -118,15 +133,25 @@ Returns:
 			try {
 				const years = getAvailableYears();
 				return {
-					content: [{
-						type: 'text' as const,
-						text: years.length > 0
-							? `利用可能な年度: ${years.join(', ')}`
-							: '仕訳データがまだありません。'
-					}]
+					content: [
+						{
+							type: 'text' as const,
+							text:
+								years.length > 0
+									? `利用可能な年度: ${years.join(', ')}`
+									: '仕訳データがまだありません。'
+						}
+					]
 				};
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -155,7 +180,11 @@ Returns:
 			try {
 				const journals = getJournalsByYear(params.fiscalYear);
 				if (journals.length === 0) {
-					return { content: [{ type: 'text' as const, text: `${params.fiscalYear}年度の仕訳はありません。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `${params.fiscalYear}年度の仕訳はありません。` }
+						]
+					};
 				}
 
 				const lines = [
@@ -166,14 +195,27 @@ Returns:
 				];
 
 				for (const j of journals) {
-					const debitSum = j.lines.filter(l => l.type === 'debit').reduce((s, l) => s + l.amount, 0);
-					const creditSum = j.lines.filter(l => l.type === 'credit').reduce((s, l) => s + l.amount, 0);
-					lines.push(`| ${j.date} | ${j.description} | ${j.vendor} | ${debitSum.toLocaleString()} | ${creditSum.toLocaleString()} | ${j.evidenceStatus} |`);
+					const debitSum = j.lines
+						.filter((l) => l.type === 'debit')
+						.reduce((s, l) => s + l.amount, 0);
+					const creditSum = j.lines
+						.filter((l) => l.type === 'credit')
+						.reduce((s, l) => s + l.amount, 0);
+					lines.push(
+						`| ${j.date} | ${j.description} | ${j.vendor} | ${debitSum.toLocaleString()} | ${creditSum.toLocaleString()} | ${j.evidenceStatus} |`
+					);
 				}
 
 				return { content: [{ type: 'text' as const, text: lines.join('\n') }] };
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -202,11 +244,22 @@ Returns:
 			try {
 				const journal = getJournalById(params.id);
 				if (!journal) {
-					return { content: [{ type: 'text' as const, text: `仕訳ID "${params.id}" が見つかりませんでした。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `仕訳ID "${params.id}" が見つかりませんでした。` }
+						]
+					};
 				}
 				return { content: [{ type: 'text' as const, text: formatJournalMarkdown(journal) }] };
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -245,12 +298,14 @@ Examples:
 				// 貸借バランスチェック
 				const balanceError = validateDebitCreditBalance(params.lines);
 				if (balanceError) {
-					return { content: [{ type: 'text' as const, text: `バリデーションエラー: ${balanceError}` }] };
+					return {
+						content: [{ type: 'text' as const, text: `バリデーションエラー: ${balanceError}` }]
+					};
 				}
 
 				const journalId = addJournal({
 					date: params.date,
-					lines: params.lines.map(l => ({
+					lines: params.lines.map((l) => ({
 						...l,
 						taxCategory: l.taxCategory as TaxCategory | undefined
 					})) as JournalLine[],
@@ -263,13 +318,22 @@ Examples:
 				const journal = getJournalById(journalId);
 
 				return {
-					content: [{
-						type: 'text' as const,
-						text: `仕訳を作成しました。\n\n${formatJournalMarkdown(journal)}`
-					}]
+					content: [
+						{
+							type: 'text' as const,
+							text: `仕訳を作成しました。\n\n${formatJournalMarkdown(journal)}`
+						}
+					]
 				};
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -300,18 +364,27 @@ Returns:
 			try {
 				const existing = getJournalById(params.id);
 				if (!existing) {
-					return { content: [{ type: 'text' as const, text: `仕訳ID "${params.id}" が見つかりませんでした。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `仕訳ID "${params.id}" が見つかりませんでした。` }
+						]
+					};
 				}
 
 				const newLines = params.lines
-					? params.lines.map(l => ({ ...l, taxCategory: l.taxCategory as TaxCategory | undefined })) as JournalLine[]
+					? (params.lines.map((l) => ({
+							...l,
+							taxCategory: l.taxCategory as TaxCategory | undefined
+						})) as JournalLine[])
 					: existing.lines;
 
 				// 貸借バランスチェック
 				if (params.lines) {
 					const balanceError = validateDebitCreditBalance(params.lines);
 					if (balanceError) {
-						return { content: [{ type: 'text' as const, text: `バリデーションエラー: ${balanceError}` }] };
+						return {
+							content: [{ type: 'text' as const, text: `バリデーションエラー: ${balanceError}` }]
+						};
 					}
 				}
 
@@ -327,13 +400,22 @@ Returns:
 				const updated = getJournalById(params.id);
 
 				return {
-					content: [{
-						type: 'text' as const,
-						text: `仕訳を更新しました。\n\n${formatJournalMarkdown(updated)}`
-					}]
+					content: [
+						{
+							type: 'text' as const,
+							text: `仕訳を更新しました。\n\n${formatJournalMarkdown(updated)}`
+						}
+					]
 				};
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -362,18 +444,31 @@ Returns:
 			try {
 				const existing = getJournalById(params.id);
 				if (!existing) {
-					return { content: [{ type: 'text' as const, text: `仕訳ID "${params.id}" が見つかりませんでした。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `仕訳ID "${params.id}" が見つかりませんでした。` }
+						]
+					};
 				}
 
 				deleteJournal(params.id);
 				return {
-					content: [{
-						type: 'text' as const,
-						text: `仕訳を削除しました: ${existing.date} ${existing.description} (${existing.vendor})`
-					}]
+					content: [
+						{
+							type: 'text' as const,
+							text: `仕訳を削除しました: ${existing.date} ${existing.description} (${existing.vendor})`
+						}
+					]
 				};
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -403,13 +498,22 @@ Returns:
 			try {
 				const result = deleteYearData(params.fiscalYear);
 				return {
-					content: [{
-						type: 'text' as const,
-						text: `${params.fiscalYear}年度のデータを削除しました。仕訳: ${result.journalCount}件、証憑: ${result.attachmentCount}件`
-					}]
+					content: [
+						{
+							type: 'text' as const,
+							text: `${params.fiscalYear}年度のデータを削除しました。仕訳: ${result.journalCount}件、証憑: ${result.attachmentCount}件`
+						}
+					]
 				};
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);

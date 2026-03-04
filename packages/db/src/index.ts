@@ -40,7 +40,7 @@ export {
 	deleteVendor
 } from './repositories/vendor-repository.js';
 
-export { exportYearData } from './repositories/import-export.js';
+export { exportYearData, importData } from './repositories/import-export.js';
 
 // --- Seed ---
 export { seedDefaultAccounts } from './seed.js';

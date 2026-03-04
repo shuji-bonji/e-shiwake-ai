@@ -20,7 +20,7 @@ export function generateConsumptionTax(
 	if (summary.sales10TaxIncluded > 0) {
 		salesRows.push({
 			taxCategory: 'sales_10',
-			taxCategoryLabel: TaxCategoryLabels['sales_10'],
+			taxCategoryLabel: TaxCategoryLabels.sales_10,
 			taxableAmount: summary.sales10TaxExcluded,
 			taxAmount: summary.sales10Tax
 		});
@@ -28,7 +28,7 @@ export function generateConsumptionTax(
 	if (summary.sales8TaxIncluded > 0) {
 		salesRows.push({
 			taxCategory: 'sales_8',
-			taxCategoryLabel: TaxCategoryLabels['sales_8'],
+			taxCategoryLabel: TaxCategoryLabels.sales_8,
 			taxableAmount: summary.sales8TaxExcluded,
 			taxAmount: summary.sales8Tax
 		});
@@ -39,7 +39,7 @@ export function generateConsumptionTax(
 	if (summary.purchase10TaxIncluded > 0) {
 		purchaseRows.push({
 			taxCategory: 'purchase_10',
-			taxCategoryLabel: TaxCategoryLabels['purchase_10'],
+			taxCategoryLabel: TaxCategoryLabels.purchase_10,
 			taxableAmount: summary.purchase10TaxExcluded,
 			taxAmount: summary.purchase10Tax
 		});
@@ -47,7 +47,7 @@ export function generateConsumptionTax(
 	if (summary.purchase8TaxIncluded > 0) {
 		purchaseRows.push({
 			taxCategory: 'purchase_8',
-			taxCategoryLabel: TaxCategoryLabels['purchase_8'],
+			taxCategoryLabel: TaxCategoryLabels.purchase_8,
 			taxableAmount: summary.purchase8TaxExcluded,
 			taxAmount: summary.purchase8Tax
 		});

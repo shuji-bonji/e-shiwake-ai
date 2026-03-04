@@ -1,0 +1,3648 @@
+{
+  "version": "1.0.0",
+  "exportedAt": "2026-03-04T18:15:12.314Z",
+  "fiscalYear": 2025,
+  "journals": [
+    {
+      "id": "d5e7f36d-02dc-434c-8bdf-dcaf133bd6de",
+      "date": "2025-12-29",
+      "lines": [
+        {
+          "id": "ce44e5c1-13cf-47f0-8c9b-e585e42eba9c",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 1978,
+          "taxCategory": "na"
+        },
+        {
+          "id": "7109bf5c-ad2d-4665-9236-36a117163dbc",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 1978,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "Microsoft365利用料",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:37:33.144Z",
+      "updatedAt": "2026-02-17T18:33:39.676Z"
+    },
+    {
+      "id": "0a255e85-2473-4c87-9f5b-910deb632f3d",
+      "date": "2025-12-29",
+      "lines": [
+        {
+          "id": "c6a7252e-062b-47a4-86f8-c5b922593f88",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 630,
+          "taxCategory": "na"
+        },
+        {
+          "id": "91eacc42-f68f-4f4a-b854-a01d2c7fea92",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 630,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "DeepL利用料",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:36:40.607Z",
+      "updatedAt": "2026-01-02T10:37:21.804Z"
+    },
+    {
+      "id": "a7195b27-d369-4f5b-9646-bef771541da5",
+      "date": "2025-12-29",
+      "lines": [
+        {
+          "id": "0e58a02f-37b0-48ee-a1fc-355f32b77922",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 15818,
+          "taxCategory": "na"
+        },
+        {
+          "id": "12387106-49be-479e-b3e9-c4635eda89bc",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 15818,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "Claude利用料",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:35:52.113Z",
+      "updatedAt": "2026-01-02T10:36:20.205Z"
+    },
+    {
+      "id": "64757d08-003e-4a21-9420-745ba220eb72",
+      "date": "2025-12-29",
+      "lines": [
+        {
+          "id": "3c79bde8-1bd2-44a4-a0ca-f60d03342dc3",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 3524,
+          "taxCategory": "na"
+        },
+        {
+          "id": "93f511b1-df08-41af-b734-c5742a391b28",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 3524,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "OpenAI利用料",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:30:20.199Z",
+      "updatedAt": "2026-01-02T10:31:18.915Z"
+    },
+    {
+      "id": "1b6dda36-91c3-4758-a8a7-f737a220a106",
+      "date": "2025-12-29",
+      "lines": [
+        {
+          "id": "bd39389f-e615-482e-a401-b9af203c6e2a",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 84800,
+          "taxCategory": "na"
+        },
+        {
+          "id": "ce052b82-fb9a-481b-9cfe-8e2c4bd30c91",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 84800,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "Mac mini（家事按分80％）",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:27:43.250Z",
+      "updatedAt": "2026-01-02T10:29:25.266Z"
+    },
+    {
+      "id": "670483fa-e3f4-4852-8e0b-c34ef014e6f2",
+      "date": "2025-12-29",
+      "lines": [
+        {
+          "id": "a1f4ac14-b16c-43db-968f-1d265e80c4c0",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 72400,
+          "taxCategory": "na"
+        },
+        {
+          "id": "16a4d603-ae0a-4cb2-9062-d1bf674cb906",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 72400,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "モニター（家事按分80％）",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:27:14.601Z",
+      "updatedAt": "2026-01-02T10:29:30.245Z"
+    },
+    {
+      "id": "6b8eb673-4dc6-4c49-b98a-2e9511694bde",
+      "date": "2025-12-29",
+      "lines": [
+        {
+          "id": "8eb727c4-c1d5-4901-96fc-441406ae8e19",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 76980,
+          "taxCategory": "na"
+        },
+        {
+          "id": "62ecbbee-5ae9-4ac5-bbc8-d9821f7332df",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 76980,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "モニター（家事按分80％）",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:25:57.401Z",
+      "updatedAt": "2026-01-02T10:29:36.200Z"
+    },
+    {
+      "id": "d7ba3fe4-9686-47f4-b6ac-a392b8a7855a",
+      "date": "2025-12-29",
+      "lines": [
+        {
+          "id": "e04e3676-42e1-43bb-b996-4b6a372d84cd",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 278,
+          "taxCategory": "na"
+        },
+        {
+          "id": "e77d68e6-5b9e-4d82-973b-68b4c9bb2689",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 278,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "AWS利用料",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:23:46.202Z",
+      "updatedAt": "2026-01-02T10:29:45.496Z"
+    },
+    {
+      "id": "eaa246f6-4e35-4ff2-b594-f204b536dc68",
+      "date": "2025-12-29",
+      "lines": [
+        {
+          "id": "029306cf-8fdd-459f-9690-51a646b69862",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 91330,
+          "taxCategory": "na"
+        },
+        {
+          "id": "d33bcf77-0764-46d7-8783-c9d081f1a09f",
+          "type": "debit",
+          "accountCode": "5017",
+          "amount": 13699,
+          "taxCategory": "na",
+          "_businessRatioApplied": true,
+          "_originalAmount": 91330,
+          "_businessRatio": 15
+        },
+        {
+          "id": "8497413f-ee0c-4eee-a626-a1b5aa06a7cb",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 77631,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        }
+      ],
+      "vendor": "",
+      "description": "家賃",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:21:46.043Z",
+      "updatedAt": "2026-01-08T09:44:12.396Z"
+    },
+    {
+      "date": "2025-12-28",
+      "lines": [
+        {
+          "id": "be9d21c3-3476-405c-90cb-75d15e9842d5",
+          "type": "debit",
+          "accountCode": "5006",
+          "amount": 1489,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "87cbc296-fdd3-423e-86cc-353761d83417",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 1489,
+          "taxCategory": "na"
+        }
+      ],
+      "description": "OCN利用料",
+      "vendor": "ＮＴＴドコモビジネス",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "45447381-bb0c-4dfa-a2e1-c0eae2105d69",
+          "journalEntryId": "99dbbc7d-d1bc-4e41-8a59-ec835133e669",
+          "documentDate": "2025-12-28",
+          "documentType": "bill",
+          "originalName": "0117566685_202512_C_請求金額のお知らせ.pdf",
+          "generatedName": "2025-12-28_請求書_OCN利用料_1,489円_ＮＴＴドコモビジネス.pdf",
+          "mimeType": "application/pdf",
+          "size": 24488,
+          "description": "OCN利用料",
+          "amount": 1489,
+          "vendor": "ＮＴＴドコモビジネス",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-28_請求書_OCN利用料_1,489円_ＮＴＴドコモビジネス.pdf",
+          "createdAt": "2026-02-17T17:35:32.654Z"
+        }
+      ],
+      "id": "99dbbc7d-d1bc-4e41-8a59-ec835133e669",
+      "createdAt": "2026-02-17T17:34:49.065Z",
+      "updatedAt": "2026-02-17T17:35:32.655Z"
+    },
+    {
+      "date": "2025-12-28",
+      "lines": [
+        {
+          "id": "2b02bbd9-5032-4548-928b-23efa4b8f261",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 1978,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "d4c02f95-84f6-45e2-9b41-b45d3b601dbd",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 1978,
+          "taxCategory": "na"
+        }
+      ],
+      "description": "Microsoft365利用料",
+      "vendor": "Microsoft",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "36ea0ef2-6303-43af-a76b-99043a7ddf9e",
+          "journalEntryId": "a5b6743e-607f-4005-b5cd-e9ea02295282",
+          "documentDate": "2025-12-28",
+          "documentType": "bill",
+          "originalName": "20251228_1978_G131772981_4e9ff4151f6f44a494682b6035e917ca.pdf",
+          "generatedName": "2025-12-28_請求書_Microsoft365利用料_1,978円_Microsoft.pdf",
+          "mimeType": "application/pdf",
+          "size": 249104,
+          "description": "Microsoft365利用料",
+          "amount": 1978,
+          "vendor": "Microsoft",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-28_請求書_Microsoft365利用料_1,978円_Microsoft.pdf",
+          "createdAt": "2026-02-17T03:01:18.463Z"
+        }
+      ],
+      "id": "a5b6743e-607f-4005-b5cd-e9ea02295282",
+      "createdAt": "2026-02-17T03:00:37.568Z",
+      "updatedAt": "2026-02-17T17:45:53.071Z"
+    },
+    {
+      "date": "2025-12-27",
+      "lines": [
+        {
+          "id": "6412d92a-be47-464d-a63c-8861eff3b424",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 3523,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "adaa075c-98d0-4d67-a881-2a5b9823cace",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 3523,
+          "taxCategory": "na"
+        }
+      ],
+      "description": "OpenAI利用料",
+      "vendor": "OpenAI",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "23e0eabc-547e-4da8-8bf2-fc6939dfa488",
+          "journalEntryId": "9cb52f51-1cac-44ce-b65c-50c86202959c",
+          "documentDate": "2025-12-27",
+          "documentType": "bill",
+          "originalName": "20251227-Invoice-50BDBD36-0032.pdf",
+          "generatedName": "2025-12-27_請求書_OpenAI利用料_3,523円_OpenAI.pdf",
+          "mimeType": "application/pdf",
+          "size": 51160,
+          "description": "OpenAI利用料",
+          "amount": 3523,
+          "vendor": "OpenAI",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-27_請求書_OpenAI利用料_3,523円_OpenAI.pdf",
+          "createdAt": "2026-02-17T03:17:56.353Z"
+        },
+        {
+          "id": "02834500-9417-4fd7-ad8a-551a5da78e74",
+          "journalEntryId": "9cb52f51-1cac-44ce-b65c-50c86202959c",
+          "documentDate": "2025-12-27",
+          "documentType": "receipt",
+          "originalName": "20251227-Receipt-2426-7247-8799.pdf",
+          "generatedName": "2025-12-27_領収書_OpenAI利用料_3,523円_OpenAI.pdf",
+          "mimeType": "application/pdf",
+          "size": 51926,
+          "description": "OpenAI利用料",
+          "amount": 3523,
+          "vendor": "OpenAI",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-27_領収書_OpenAI利用料_3,523円_OpenAI.pdf",
+          "createdAt": "2026-02-17T03:18:03.188Z"
+        }
+      ],
+      "id": "9cb52f51-1cac-44ce-b65c-50c86202959c",
+      "createdAt": "2026-02-17T03:17:00.089Z",
+      "updatedAt": "2026-02-17T17:45:55.472Z"
+    },
+    {
+      "date": "2025-12-26",
+      "lines": [
+        {
+          "id": "a8872199-79c0-47d6-8495-fcbe02f8883f",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 1434,
+          "taxCategory": "na"
+        },
+        {
+          "id": "412cec4d-a091-4ba6-ab3e-d899eb13c99a",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 1434,
+          "taxCategory": "na"
+        }
+      ],
+      "description": "OCN利用料",
+      "vendor": "三井住友カード",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "id": "487403a4-4b9a-4d74-9241-6ec8709e5c93",
+      "createdAt": "2026-02-17T17:34:22.709Z",
+      "updatedAt": "2026-02-17T17:34:41.848Z"
+    },
+    {
+      "date": "2025-12-26",
+      "lines": [
+        {
+          "id": "677ed403-61f3-41fe-b04a-9f55b34b0c2f",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 5841,
+          "taxCategory": "na"
+        },
+        {
+          "id": "de4f290e-6ce1-4eaf-9724-8da2064862c7",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 5841,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "三井住友カード",
+      "description": "水道代",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "id": "b618eede-a388-4d18-a7ec-b15e58fbd2ce",
+      "createdAt": "2026-02-17T16:00:29.221Z",
+      "updatedAt": "2026-02-17T16:01:37.595Z"
+    },
+    {
+      "id": "2ce33e4c-23f6-4a16-995e-09058c0dd34c",
+      "date": "2025-12-26",
+      "lines": [
+        {
+          "id": "7243a54c-4607-440a-903d-ba94be414ee0",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 9371,
+          "taxCategory": "na"
+        },
+        {
+          "id": "f97f695c-9d4f-40d9-b0da-aaa2050a4195",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 9371,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "三井住友カード",
+      "description": "電気代、ガス代",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:20:42.411Z",
+      "updatedAt": "2026-01-02T10:21:34.493Z"
+    },
+    {
+      "id": "f83315a7-ccf8-4ea4-acf4-ebaf1f58cbba",
+      "date": "2025-12-26",
+      "lines": [
+        {
+          "id": "6ad55850-50b2-4b0f-9800-2cb68e2e348f",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 6490,
+          "taxCategory": "na"
+        },
+        {
+          "id": "f7401060-9956-4d3c-b55e-91ae6034dd30",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 6490,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "三井住友カード",
+      "description": "NTTフレッツ光料金",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:20:12.728Z",
+      "updatedAt": "2026-01-02T10:20:27.434Z"
+    },
+    {
+      "id": "f8c5b674-d6f1-4e1f-b82a-5ce59ac14728",
+      "date": "2025-12-26",
+      "lines": [
+        {
+          "id": "4d270fab-684f-4fb5-ab46-cdd9e32ce70e",
+          "type": "debit",
+          "accountCode": "1005",
+          "amount": 550000,
+          "taxCategory": "na"
+        },
+        {
+          "id": "e5e699f2-8e0c-4663-9f87-0276af1f1c35",
+          "type": "credit",
+          "accountCode": "4001",
+          "amount": 550000,
+          "taxCategory": "sales_10"
+        }
+      ],
+      "vendor": "株式会社ヘルスベイシス",
+      "description": "BIMツール開発支援",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "2551893a-03e7-4e04-a05d-538cec8cf164",
+          "journalEntryId": "f8c5b674-d6f1-4e1f-b82a-5ce59ac14728",
+          "documentDate": "2025-12-26",
+          "documentType": "invoice",
+          "originalName": "BIMツール開発支援_請求書_鳴海_202512.pdf",
+          "generatedName": "2025-12-26_請求書発行_BIMツール開発支援_550,000円_株式会社ヘルスベイシス.pdf",
+          "mimeType": "application/pdf",
+          "size": 305843,
+          "description": "BIMツール開発支援",
+          "amount": 550000,
+          "vendor": "株式会社ヘルスベイシス",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-26_請求書発行_BIMツール開発支援_550,000円_株式会社ヘルスベイシス.pdf",
+          "createdAt": "2026-01-02T10:17:29.845Z"
+        }
+      ],
+      "createdAt": "2026-01-02T10:16:21.222Z",
+      "updatedAt": "2026-01-07T11:25:50.464Z"
+    },
+    {
+      "date": "2025-12-24",
+      "lines": [
+        {
+          "id": "94a4ca09-104a-4b11-8695-269b31217997",
+          "type": "debit",
+          "accountCode": "5024",
+          "amount": 11900,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "e1dcca9f-390b-4c8b-ac40-fff4a8ca0cea",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 11900,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Bitdefender",
+      "description": "Bitdefender Premium Security",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "08ac85c7-b092-43f1-8f43-00e471aec546",
+          "journalEntryId": "f5c212bc-3840-41d3-b43d-9c4617e4dcb4",
+          "documentDate": "2025-12-24",
+          "documentType": "bill",
+          "originalName": "20251224-invoice_BV99377181.pdf",
+          "generatedName": "2025-12-24_請求書_Bitdefender Premium Security_11,900円_Bitdefender.pdf",
+          "mimeType": "application/pdf",
+          "size": 55097,
+          "description": "Bitdefender Premium Security",
+          "amount": 11900,
+          "vendor": "Bitdefender",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-24_請求書_Bitdefender Premium Security_11,900円_Bitdefender.pdf",
+          "createdAt": "2026-02-17T03:31:30.102Z"
+        }
+      ],
+      "id": "f5c212bc-3840-41d3-b43d-9c4617e4dcb4",
+      "createdAt": "2026-02-17T03:25:23.541Z",
+      "updatedAt": "2026-02-17T03:42:55.781Z"
+    },
+    {
+      "date": "2025-12-19",
+      "lines": [
+        {
+          "id": "0a4c5931-832a-4ec4-9916-2edb0e77eb1b",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 3990,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "a949190b-1706-454a-bea6-5290b3df802a",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 3990,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "",
+      "description": "Anker USB Switch",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "f6c5984d-ada7-4c86-8a8e-9a567e90bdd8",
+          "journalEntryId": "6a9cc682-9473-4825-bae0-58ea97f70157",
+          "documentDate": "2025-12-19",
+          "documentType": "bill",
+          "originalName": "20251219_3990_Amazon_USB Switch_invoice_503-4060553-7217420.pdf",
+          "generatedName": "2025-12-19_請求書_Anker USB Switch_3,990円_不明.pdf",
+          "mimeType": "application/pdf",
+          "size": 97578,
+          "description": "Anker USB Switch",
+          "amount": 3990,
+          "vendor": "",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-19_請求書_Anker USB Switch_3,990円_不明.pdf",
+          "createdAt": "2026-01-07T11:34:23.811Z"
+        }
+      ],
+      "id": "6a9cc682-9473-4825-bae0-58ea97f70157",
+      "createdAt": "2026-01-07T11:32:57.969Z",
+      "updatedAt": "2026-01-07T11:34:23.813Z"
+    },
+    {
+      "date": "2025-12-17",
+      "lines": [
+        {
+          "id": "c2dc3a3b-f16f-47c8-acbe-ee1aa89526e4",
+          "type": "debit",
+          "accountCode": "5004",
+          "amount": 894,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 2712,
+          "_businessRatio": 33
+        },
+        {
+          "id": "ed231fb0-b42e-4767-9077-4ca6282d708e",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 1818,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "a607c946-7574-4208-8dbb-327702448a49",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 2712,
+          "taxCategory": "na"
+        }
+      ],
+      "description": "ガス代",
+      "vendor": "東京電力エナジーパートナー",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "9a51deec-dec5-45fa-93c6-e6f03360381f",
+          "journalEntryId": "c2aea00f-3778-4891-b92a-09b6cbb0b32b",
+          "documentDate": "2025-12-17",
+          "documentType": "bill",
+          "originalName": "21-00168-76501_とくとくガスプラン_2025年12月分.pdf",
+          "generatedName": "2025-12-17_請求書_ガス代_2,392円_東京電力エナジーパートナー.pdf",
+          "mimeType": "application/pdf",
+          "size": 67390,
+          "description": "ガス代",
+          "amount": 2392,
+          "vendor": "東京電力エナジーパートナー",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-17_請求書_ガス代_2,392円_東京電力エナジーパートナー.pdf",
+          "createdAt": "2026-02-17T15:34:00.249Z"
+        }
+      ],
+      "id": "c2aea00f-3778-4891-b92a-09b6cbb0b32b",
+      "createdAt": "2026-02-17T15:33:32.122Z",
+      "updatedAt": "2026-02-17T15:34:18.635Z"
+    },
+    {
+      "date": "2025-12-17",
+      "lines": [
+        {
+          "id": "b9fcdea3-9d77-41e5-b2b0-10133e8bb0a3",
+          "type": "debit",
+          "accountCode": "5004",
+          "amount": 3043,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 9223,
+          "_businessRatio": 33
+        },
+        {
+          "id": "37ee0dc5-0c46-41fd-a352-d8fb0a68047c",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 6180,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "5729e37c-d973-4f67-b44e-05fb6bb6705d",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 9223,
+          "taxCategory": "na"
+        }
+      ],
+      "description": "電気代",
+      "vendor": "東京電力エナジーパートナー",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "caf51e58-2343-4ce0-b0c9-04efc1794ac9",
+          "journalEntryId": "c188c8c9-ef4f-435f-9a1c-d5de1fd35792",
+          "documentDate": "2025-12-17",
+          "documentType": "bill",
+          "originalName": "21-00168-78989_スタンダードＳ_2025年12月分.pdf",
+          "generatedName": "2025-12-17_請求書_電気代_3,043円_東京電力エナジーパートナー.pdf",
+          "mimeType": "application/pdf",
+          "size": 75514,
+          "description": "電気代",
+          "amount": 3043,
+          "vendor": "東京電力エナジーパートナー",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-17_請求書_電気代_3,043円_東京電力エナジーパートナー.pdf",
+          "createdAt": "2026-02-17T15:33:20.673Z"
+        }
+      ],
+      "id": "c188c8c9-ef4f-435f-9a1c-d5de1fd35792",
+      "createdAt": "2026-02-17T15:32:11.189Z",
+      "updatedAt": "2026-02-17T15:33:20.674Z"
+    },
+    {
+      "date": "2025-12-17",
+      "lines": [
+        {
+          "id": "2b31ae2c-0662-41b3-8b1c-2bcd0fd329ca",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 15932
+        },
+        {
+          "id": "6af250e3-4cbf-4bd2-a44b-54041cb58c95",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 15932,
+          "taxCategory": "na"
+        }
+      ],
+      "description": "Claude利用料",
+      "vendor": "Anthropic",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "1a83f402-a33a-431d-833f-8024b8ed0ce0",
+          "journalEntryId": "4f41420f-37d6-4842-980e-167d3cb4f3cb",
+          "documentDate": "2025-12-17",
+          "documentType": "bill",
+          "originalName": "20251217_$100.00_Anthropic_Invoice-A80909DB-0013.pdf",
+          "generatedName": "2025-12-17_請求書_Claude利用料_15,932円_Anthropic.pdf",
+          "mimeType": "application/pdf",
+          "size": 55959,
+          "description": "Claude利用料",
+          "amount": 15932,
+          "vendor": "Anthropic",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-17_請求書_Claude利用料_15,932円_Anthropic.pdf",
+          "createdAt": "2026-02-17T02:50:09.018Z"
+        },
+        {
+          "id": "7cd1819a-e1f9-4625-b313-8bc27bc87e56",
+          "journalEntryId": "4f41420f-37d6-4842-980e-167d3cb4f3cb",
+          "documentDate": "2025-12-17",
+          "documentType": "receipt",
+          "originalName": "20251217_$100.00_Anthropic_Receipt-2693-5928-6588.pdf",
+          "generatedName": "2025-12-17_領収書_Claude利用料_15,932円_Anthropic.pdf",
+          "mimeType": "application/pdf",
+          "size": 55599,
+          "description": "Claude利用料",
+          "amount": 15932,
+          "vendor": "Anthropic",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-17_領収書_Claude利用料_15,932円_Anthropic.pdf",
+          "createdAt": "2026-02-17T02:50:21.034Z"
+        }
+      ],
+      "id": "4f41420f-37d6-4842-980e-167d3cb4f3cb",
+      "createdAt": "2026-02-17T02:49:31.786Z",
+      "updatedAt": "2026-02-21T06:52:36.069Z"
+    },
+    {
+      "id": "37f90ca0-66af-4fb3-881d-d4568b976a16",
+      "date": "2025-12-14",
+      "lines": [
+        {
+          "id": "8b014f30-44a5-46e3-bf1d-8655fdd73d4e",
+          "type": "debit",
+          "accountCode": "5006",
+          "amount": 2141,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 6490,
+          "_businessRatio": 33
+        },
+        {
+          "id": "f0c27cc7-422e-44cc-aad9-a306d0f809b8",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 4349,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "c2aaded4-f7bc-468d-aecd-36de0669fcf5",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 6490,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "NTT",
+      "description": "NTTフレッツ光料金",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "ead214a6-0d5b-432a-8ad8-27af6ee17300",
+          "journalEntryId": "37f90ca0-66af-4fb3-881d-d4568b976a16",
+          "documentDate": "2025-12-14",
+          "documentType": "bill",
+          "originalName": "20251214_6490_NTT_適格請求書_202512eb0030448871a1918866153422644676.pdf",
+          "generatedName": "2025-12-14_請求書_NTTフレッツ光料金_2,141円_NTT.pdf",
+          "mimeType": "application/pdf",
+          "size": 13359,
+          "description": "NTTフレッツ光料金",
+          "amount": 2141,
+          "vendor": "NTT",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-14_請求書_NTTフレッツ光料金_2,141円_NTT.pdf",
+          "createdAt": "2026-01-05T10:50:07.409Z"
+        }
+      ],
+      "createdAt": "2026-01-02T10:14:23.647Z",
+      "updatedAt": "2026-02-21T06:52:35.992Z"
+    },
+    {
+      "id": "c080475c-e619-4913-8b3c-769d7f1c4de3",
+      "date": "2025-12-12",
+      "lines": [
+        {
+          "id": "4859e09a-a289-4e72-bcb6-cc79314180aa",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 4002
+        },
+        {
+          "id": "9c9acaea-811d-4baf-b21f-5f37e9f8b6cf",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 4002,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "DeepL",
+      "description": "DeepL利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "e89d36c5-7f00-4928-9618-da1834acc858",
+          "journalEntryId": "c080475c-e619-4913-8b3c-769d7f1c4de3",
+          "documentDate": "2025-12-12",
+          "documentType": "bill",
+          "originalName": "20251212_4002_DeepL_invoice_DI-20251212-3226.pdf",
+          "generatedName": "2025-12-12_請求書_DeepL利用料_4,002円_DeepL.pdf",
+          "mimeType": "application/pdf",
+          "size": 82521,
+          "description": "DeepL利用料",
+          "amount": 4002,
+          "vendor": "DeepL",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-12_請求書_DeepL利用料_4,002円_DeepL.pdf",
+          "createdAt": "2026-01-02T10:13:53.906Z"
+        }
+      ],
+      "createdAt": "2026-01-02T10:13:09.372Z",
+      "updatedAt": "2026-01-03T01:33:44.005Z"
+    },
+    {
+      "id": "0ea93412-df4a-46e4-9a73-dbf70c23d18a",
+      "date": "2025-12-10",
+      "lines": [
+        {
+          "id": "77fe4c3c-f609-48ce-b3be-f60efb7b895a",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 3499,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "40316192-b578-499f-8252-101346b1b248",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 3499,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "",
+      "description": "USBハブ",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "3c85c17d-f4c1-4514-9301-b59a4124cc37",
+          "journalEntryId": "0ea93412-df4a-46e4-9a73-dbf70c23d18a",
+          "documentDate": "2025-12-10",
+          "documentType": "bill",
+          "originalName": "20251210_3499_Amazon_USBハブ_invoice_503-6312045-9591050.pdf",
+          "generatedName": "2025-12-10_請求書_USBハブ_3,499円_不明.pdf",
+          "mimeType": "application/pdf",
+          "size": 45715,
+          "description": "USBハブ",
+          "amount": 3499,
+          "vendor": "",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-10_請求書_USBハブ_3,499円_不明.pdf",
+          "createdAt": "2026-01-02T10:12:36.157Z"
+        }
+      ],
+      "createdAt": "2026-01-02T10:12:02.876Z",
+      "updatedAt": "2026-02-21T06:52:35.825Z"
+    },
+    {
+      "id": "29b6935e-9ced-48cb-95fc-115e6358028f",
+      "date": "2025-12-07",
+      "lines": [
+        {
+          "id": "51f142a9-f115-465e-bac9-fcbc33898de3",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 2300,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "f853a9f4-ce4e-4b37-9f19-07abd5d6a9d3",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 2300,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Amazon",
+      "description": "USB Type-A to Type-C 変換アダプター x3 x2",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "d5ea4d91-2ae5-4cfc-bb2c-aa496ca8b02a",
+          "journalEntryId": "29b6935e-9ced-48cb-95fc-115e6358028f",
+          "documentDate": "2025-12-07",
+          "documentType": "bill",
+          "originalName": "20251207_2300_Amazon_USB Type-A to Type-C 変換アダプタ_invoice_503-3996050-6132635.pdf",
+          "generatedName": "2025-12-07_請求書_USB Type-A to Type-C 変換アダプター x3 x2_2,300円_Amazon.pdf",
+          "mimeType": "application/pdf",
+          "size": 51781,
+          "description": "USB Type-A to Type-C 変換アダプター x3 x2",
+          "amount": 2300,
+          "vendor": "Amazon",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-07_請求書_USB Type-A to Type-C 変換アダプター x3 x2_2,300円_Amazon.pdf",
+          "createdAt": "2026-01-02T10:08:10.173Z"
+        }
+      ],
+      "createdAt": "2026-01-02T10:07:31.655Z",
+      "updatedAt": "2026-02-21T06:52:35.940Z"
+    },
+    {
+      "id": "c64e9812-2815-4940-a2d5-a5e0ee4aa6a8",
+      "date": "2025-12-06",
+      "lines": [
+        {
+          "id": "fe4ac7b7-ce11-41b3-8349-2794be479dec",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 400000,
+          "taxCategory": "na"
+        },
+        {
+          "id": "2e070618-6c53-4070-a2e8-37c3ce8dcda2",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 400000,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "",
+      "description": "生活費",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:06:25.404Z",
+      "updatedAt": "2026-01-02T10:07:07.777Z"
+    },
+    {
+      "id": "993db92e-43c9-4632-bf97-b4ffa41efb12",
+      "date": "2025-12-05",
+      "lines": [
+        {
+          "id": "04d3002f-0d39-41c3-9a94-81ef22d95462",
+          "type": "debit",
+          "accountCode": "1003",
+          "amount": 482141,
+          "taxCategory": "na"
+        },
+        {
+          "id": "b1d032b0-c622-4133-8d3f-8ae322f70b2c",
+          "type": "credit",
+          "accountCode": "1005",
+          "amount": 482141,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ヘルスベイシス",
+      "description": "BIMツール開発支援：入金",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T10:04:32.488Z",
+      "updatedAt": "2026-01-02T10:06:01.428Z"
+    },
+    {
+      "id": "15ccdede-72f6-499c-afbe-fbe0e31fa399",
+      "date": "2025-12-05",
+      "lines": [
+        {
+          "id": "ce442927-6e51-4971-b4c1-d60935ed8697",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 5608,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "196a4365-28d1-44ba-84d5-1cb457c4b3aa",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 5608,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Amazon",
+      "description": "USB-C to HDMI ケーブル x2",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "bd52e736-7c7e-4023-a0af-dd7a5ea1eec3",
+          "journalEntryId": "15ccdede-72f6-499c-afbe-fbe0e31fa399",
+          "documentDate": "2025-12-05",
+          "documentType": "bill",
+          "originalName": "20251205_1387+5608+4480_Amazon_HDMI切替機+HDMIケーブル_invoice_503-2411880-4649404.pdf",
+          "generatedName": "2025-12-05_請求書_USB-C to HDMI ケーブル x2_5,608円_Amazon.pdf",
+          "mimeType": "application/pdf",
+          "size": 172602,
+          "description": "USB-C to HDMI ケーブル x2",
+          "amount": 5608,
+          "vendor": "Amazon",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-05_請求書_USB-C to HDMI ケーブル x2_5,608円_Amazon.pdf",
+          "createdAt": "2026-01-02T10:04:19.940Z"
+        }
+      ],
+      "createdAt": "2026-01-02T10:03:37.625Z",
+      "updatedAt": "2026-02-21T06:52:35.857Z"
+    },
+    {
+      "id": "9963bd28-3995-4f19-84c8-ef35dbbbd0cd",
+      "date": "2025-12-05",
+      "lines": [
+        {
+          "id": "5f84925e-a337-4ca6-8643-e5e0ba8315a1",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 4480,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "9fdc48ec-2950-4460-87b6-beb99c1585f4",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 4480,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Amazon",
+      "description": "HDMI切替器",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "594107bf-8979-4227-b7fa-1f2c2baf29f5",
+          "journalEntryId": "9963bd28-3995-4f19-84c8-ef35dbbbd0cd",
+          "documentDate": "2025-12-05",
+          "documentType": "bill",
+          "originalName": "20251205_1387+5608+4480_Amazon_HDMI切替機+HDMIケーブル_invoice_503-2411880-4649404.pdf",
+          "generatedName": "2025-12-05_請求書_HDMI切替器_4,480円_Amazon.pdf",
+          "mimeType": "application/pdf",
+          "size": 172602,
+          "description": "HDMI切替器",
+          "amount": 4480,
+          "vendor": "Amazon",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-05_請求書_HDMI切替器_4,480円_Amazon.pdf",
+          "createdAt": "2026-01-02T10:03:23.057Z"
+        }
+      ],
+      "createdAt": "2026-01-02T10:02:28.154Z",
+      "updatedAt": "2026-01-03T01:33:41.819Z"
+    },
+    {
+      "id": "a290639e-78d1-4294-862a-a7c27ce4feb9",
+      "date": "2025-12-05",
+      "lines": [
+        {
+          "id": "bd9e9fd4-fffb-48b2-9281-898e479eb02a",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 1387,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "7a12064a-2058-4561-9081-b8e48e3b7ce0",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 1387,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Amazon",
+      "description": "HDMIケーブル x2",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "bf36614d-5902-46fe-871b-283dc42b8eea",
+          "journalEntryId": "a290639e-78d1-4294-862a-a7c27ce4feb9",
+          "documentDate": "2025-12-05",
+          "documentType": "bill",
+          "originalName": "20251205_1387+5608+4480_Amazon_HDMI切替機+HDMIケーブル_invoice_503-2411880-4649404.pdf",
+          "generatedName": "2025-12-05_請求書_HDMIケーブル x2_1,387円_Amazon.pdf",
+          "mimeType": "application/pdf",
+          "size": 172602,
+          "description": "HDMIケーブル x2",
+          "amount": 1387,
+          "vendor": "Amazon",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-05_請求書_HDMIケーブル x2_1,387円_Amazon.pdf",
+          "createdAt": "2026-01-02T10:02:16.115Z"
+        }
+      ],
+      "createdAt": "2026-01-02T10:01:26.724Z",
+      "updatedAt": "2026-01-03T01:33:41.855Z"
+    },
+    {
+      "id": "9e4da9b3-3444-40a2-8547-3b971739b135",
+      "date": "2025-12-01",
+      "lines": [
+        {
+          "id": "cc0a7dbb-87bb-4e31-b0e5-6896eef68b3c",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 283,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "e8536085-a879-4abf-8aa7-ba867dda4760",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 283,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "AWS",
+      "description": "AWS利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "b416437a-6630-4cd9-b115-77234fea5c3f",
+          "journalEntryId": "9e4da9b3-3444-40a2-8547-3b971739b135",
+          "documentDate": "2025-12-01",
+          "documentType": "bill",
+          "originalName": "20251201_283_AWS_Invoce_JPIN25-4320864.pdf",
+          "generatedName": "2025-12-01_請求書_AWS利用料_283円_AWS.pdf",
+          "mimeType": "application/pdf",
+          "size": 68947,
+          "description": "AWS利用料",
+          "amount": 283,
+          "vendor": "AWS",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-12-01_請求書_AWS利用料_283円_AWS.pdf",
+          "createdAt": "2026-01-02T10:23:40.505Z"
+        }
+      ],
+      "createdAt": "2026-01-02T09:30:35.968Z",
+      "updatedAt": "2026-02-17T17:46:35.949Z"
+    },
+    {
+      "id": "d241ee7b-d171-4934-aadf-d17266473bbb",
+      "date": "2025-11-30",
+      "lines": [
+        {
+          "id": "67e1584a-0ffe-4b04-93ad-44f8e6e89780",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 67840,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "a0b17f3a-3c93-445e-a6f2-c9cc042dbae4",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 84800,
+          "taxCategory": "na"
+        },
+        {
+          "id": "c3f4e5d5-d4f9-414f-85f2-080b6cb09933",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 16960,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Amazon",
+      "description": "Mac mini（家事按分80%）",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "937da229-2f24-44e9-ac1d-b6212a813803",
+          "journalEntryId": "d241ee7b-d171-4934-aadf-d17266473bbb",
+          "documentDate": "2025-11-30",
+          "documentType": "bill",
+          "originalName": "20251130_84800_Amazon_Mac mini_iinvoice_503-7345677-3083030.pdf",
+          "generatedName": "2025-11-30_請求書_Mac mini（家事按分80%）_67,840円_Amazon.pdf",
+          "mimeType": "application/pdf",
+          "size": 63408,
+          "description": "Mac mini（家事按分80%）",
+          "amount": 67840,
+          "vendor": "Amazon",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-30_請求書_Mac mini（家事按分80%）_67,840円_Amazon.pdf",
+          "createdAt": "2026-01-02T09:29:24.765Z"
+        }
+      ],
+      "createdAt": "2026-01-02T09:28:29.784Z",
+      "updatedAt": "2026-01-03T01:33:44.007Z"
+    },
+    {
+      "id": "bb0bc38d-2cc6-4546-ac28-3cf2740de943",
+      "date": "2025-11-29",
+      "lines": [
+        {
+          "id": "da6f5e7f-ff0b-4cb8-a63d-5b42ae8aba17",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 742,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "1ad5926b-f28f-43df-a085-1baae0870769",
+          "type": "credit",
+          "accountCode": "1001",
+          "amount": 742,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "",
+      "description": "キャリングドキュメントA4",
+      "evidenceStatus": "paper",
+      "attachments": [],
+      "createdAt": "2026-01-02T09:27:37.601Z",
+      "updatedAt": "2026-01-02T09:28:21.235Z"
+    },
+    {
+      "date": "2025-11-28",
+      "lines": [
+        {
+          "id": "bb40ac63-6af4-4c50-aeb6-15b441e0ad57",
+          "type": "debit",
+          "accountCode": "5006",
+          "amount": 473,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 1434,
+          "_businessRatio": 33
+        },
+        {
+          "id": "d21305fc-9d56-47db-ad95-1ca9132e067e",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 961,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "9cff9604-8b67-4216-813b-3d5c2f979850",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 1434,
+          "taxCategory": "na"
+        }
+      ],
+      "description": "OCN利用料",
+      "vendor": "ＮＴＴドコモビジネス",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "a0d19ea5-3142-4c4c-bfc4-f8617235d1d3",
+          "journalEntryId": "17ba93d1-b1f0-4bce-bbf7-6a178928d579",
+          "documentDate": "2025-11-28",
+          "documentType": "bill",
+          "originalName": "0117566685_202511_C_請求金額のお知らせ.pdf",
+          "generatedName": "2025-11-28_請求書_OCN利用料_473円_ＮＴＴドコモビジネス.pdf",
+          "mimeType": "application/pdf",
+          "size": 24490,
+          "description": "OCN利用料",
+          "amount": 473,
+          "vendor": "ＮＴＴドコモビジネス",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-28_請求書_OCN利用料_473円_ＮＴＴドコモビジネス.pdf",
+          "createdAt": "2026-02-17T17:33:59.968Z"
+        }
+      ],
+      "id": "17ba93d1-b1f0-4bce-bbf7-6a178928d579",
+      "createdAt": "2026-02-17T17:33:22.206Z",
+      "updatedAt": "2026-02-21T06:52:35.866Z"
+    },
+    {
+      "id": "7bf24d78-a70a-40f2-bd1a-7e601e1add09",
+      "date": "2025-11-28",
+      "lines": [
+        {
+          "id": "f4681e39-3bfc-4517-b142-75673e22e258",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 61584,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "e77032cb-041c-4158-96c4-a510f0625114",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 76980,
+          "taxCategory": "na"
+        },
+        {
+          "id": "6e224307-6842-47a4-9d38-0b8426036f18",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 15396,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Amazon",
+      "description": "モニター（家事按分80%）",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "4f80ce3e-2648-4776-99da-9f54fd34273b",
+          "journalEntryId": "7bf24d78-a70a-40f2-bd1a-7e601e1add09",
+          "documentDate": "2025-11-28",
+          "documentType": "bill",
+          "originalName": "20251130_76980_Amazon_モニターAW2725QF-A_invoice_503-7345677-3083030.pdf",
+          "generatedName": "2025-11-28_請求書_モニター（家事按分80%）_61,584円_Amazon.pdf",
+          "mimeType": "application/pdf",
+          "size": 64612,
+          "description": "モニター（家事按分80%）",
+          "amount": 61584,
+          "vendor": "Amazon",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-28_請求書_モニター（家事按分80%）_61,584円_Amazon.pdf",
+          "createdAt": "2026-01-02T09:21:36.661Z"
+        }
+      ],
+      "createdAt": "2026-01-02T09:20:22.659Z",
+      "updatedAt": "2026-01-03T01:33:41.793Z"
+    },
+    {
+      "id": "05164a17-881e-4bea-a0ad-d474c96a1ac3",
+      "date": "2025-11-28",
+      "lines": [
+        {
+          "id": "1080f590-c5d1-496e-8849-1a0cea9113c5",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 57920,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "40e3ab84-7318-4a08-9479-5865f95ad3dc",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 72400,
+          "taxCategory": "na"
+        },
+        {
+          "id": "199db5c0-cbfe-4e81-8eee-9539c3489c9b",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 14480,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Amazon",
+      "description": "モニター（家事按分80%）",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "e8074454-cad0-43b7-b980-c232d5b84ab5",
+          "journalEntryId": "05164a17-881e-4bea-a0ad-d474c96a1ac3",
+          "documentDate": "2025-11-28",
+          "documentType": "bill",
+          "originalName": "20251128_72400_Amazon_モニターPD2706U_invoice_503-7345677-3083030.pdf",
+          "generatedName": "2025-11-28_請求書_モニター（家事按分80%）_57,920円_Amazon.pdf",
+          "mimeType": "application/pdf",
+          "size": 62359,
+          "description": "モニター（家事按分80%）",
+          "amount": 57920,
+          "vendor": "Amazon",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-28_請求書_モニター（家事按分80%）_57,920円_Amazon.pdf",
+          "createdAt": "2026-01-02T09:21:31.734Z"
+        }
+      ],
+      "createdAt": "2026-01-02T09:15:50.688Z",
+      "updatedAt": "2026-02-21T06:52:35.755Z"
+    },
+    {
+      "id": "7685b023-e56f-4d14-b908-4a1ae3f9e660",
+      "date": "2025-11-28",
+      "lines": [
+        {
+          "id": "559eb938-75f1-4afe-97f4-167cf0444cfd",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 1978,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "2438bc21-9803-4203-bc2c-ceab3cc27d27",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 1978,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Microsoft",
+      "description": "Microsoft365利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "57fa51b9-315b-4d9b-a13f-6a0b3c078f57",
+          "journalEntryId": "7685b023-e56f-4d14-b908-4a1ae3f9e660",
+          "documentDate": "2025-11-28",
+          "documentType": "bill",
+          "originalName": "20251128_1978_Microsoft_G126312689_648aef0301cd449ba2a9d3c3bfc23229.pdf",
+          "generatedName": "2025-11-28_請求書_Microsoft365利用料_1,978円_Microsoft.pdf",
+          "mimeType": "application/pdf",
+          "size": 249101,
+          "description": "Microsoft365利用料",
+          "amount": 1978,
+          "vendor": "Microsoft",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-28_請求書_Microsoft365利用料_1,978円_Microsoft.pdf",
+          "createdAt": "2026-01-02T09:15:39.357Z"
+        }
+      ],
+      "createdAt": "2026-01-02T09:14:24.311Z",
+      "updatedAt": "2026-02-17T17:46:30.099Z"
+    },
+    {
+      "id": "257b77e4-81b6-48d1-8cb5-6d3db75ffd4f",
+      "date": "2025-11-28",
+      "lines": [
+        {
+          "id": "53429a17-7fca-439d-86d1-272efe7febf2",
+          "type": "debit",
+          "accountCode": "1005",
+          "amount": 550000,
+          "taxCategory": "na"
+        },
+        {
+          "id": "4b8c2ce3-27d8-40e3-affc-421fb8bed535",
+          "type": "credit",
+          "accountCode": "4001",
+          "amount": 550000,
+          "taxCategory": "sales_10"
+        }
+      ],
+      "vendor": "株式会社ヘルスベイシス",
+      "description": "BIMツール開発支援",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "d8bc5fb3-54e5-4660-b624-43fe7a5cd5e9",
+          "journalEntryId": "257b77e4-81b6-48d1-8cb5-6d3db75ffd4f",
+          "documentDate": "2025-11-28",
+          "documentType": "invoice",
+          "originalName": "20251128_550000_ヘルスベイシス_BIMツール開発支援_請求書-202511.pdf",
+          "generatedName": "2025-11-28_請求書発行_BIMツール開発支援_550,000円_株式会社ヘルスベイシス.pdf",
+          "mimeType": "application/pdf",
+          "size": 306187,
+          "description": "BIMツール開発支援",
+          "amount": 550000,
+          "vendor": "株式会社ヘルスベイシス",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-28_請求書発行_BIMツール開発支援_550,000円_株式会社ヘルスベイシス.pdf",
+          "createdAt": "2026-01-02T09:14:02.597Z"
+        }
+      ],
+      "createdAt": "2026-01-02T09:13:14.304Z",
+      "updatedAt": "2026-02-21T06:52:35.917Z"
+    },
+    {
+      "id": "9f54a5d9-6e7c-4dc1-a108-8da5ab46c774",
+      "date": "2025-11-27",
+      "lines": [
+        {
+          "id": "60484229-19d6-4f61-b7fa-140ddd6dcf69",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 3524,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "0a770a1c-a696-4ad6-a0e5-ab6f866d1f0b",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 3524,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "OpenAI",
+      "description": "OpenAI利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "b084797e-8283-4951-8f69-61c2c9d3f424",
+          "journalEntryId": "9f54a5d9-6e7c-4dc1-a108-8da5ab46c774",
+          "documentDate": "2025-11-27",
+          "documentType": "bill",
+          "originalName": "20251127_3524_Invoice-50BDBD36-0031.pdf",
+          "generatedName": "2025-11-27_請求書_OpenAI利用料_3,524円_OpenAI.pdf",
+          "mimeType": "application/pdf",
+          "size": 51540,
+          "description": "OpenAI利用料",
+          "amount": 3524,
+          "vendor": "OpenAI",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-27_請求書_OpenAI利用料_3,524円_OpenAI.pdf",
+          "createdAt": "2026-01-02T09:12:17.534Z"
+        }
+      ],
+      "createdAt": "2026-01-02T09:11:29.402Z",
+      "updatedAt": "2026-02-17T17:46:26.965Z"
+    },
+    {
+      "id": "72c84002-1f54-449c-89f5-2a1bb6d5f187",
+      "date": "2025-11-27",
+      "lines": [
+        {
+          "id": "14b70a04-92cb-45f8-8c06-aadb4ff5b661",
+          "type": "debit",
+          "accountCode": "5017",
+          "amount": 13699,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 91330,
+          "_businessRatio": 15
+        },
+        {
+          "id": "961e5cf8-9b79-4bf7-a443-d494a2df3895",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 77631,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "c8889fee-52ac-4179-ac95-6bfc7b3d595e",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 91330,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "",
+      "description": "家賃",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T09:10:33.838Z",
+      "updatedAt": "2026-01-08T09:44:13.606Z"
+    },
+    {
+      "id": "84c02f43-ffa0-41b6-bd6d-f30b655a1694",
+      "date": "2025-11-27",
+      "lines": [
+        {
+          "id": "e38697ac-22b7-4200-b7d2-b8fb63478083",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 3442,
+          "taxCategory": "na"
+        },
+        {
+          "id": "5c9dfa4c-70f4-4689-9ab6-bbedb77da559",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 3442,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "OpenAI利用料",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T09:09:49.165Z",
+      "updatedAt": "2026-01-02T09:10:24.484Z"
+    },
+    {
+      "id": "ce1b8dde-9db3-4875-b46c-a2870cb295f8",
+      "date": "2025-11-27",
+      "lines": [
+        {
+          "id": "34291b34-579b-4895-828d-6b3a71f6f9cc",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 1978,
+          "taxCategory": "na"
+        },
+        {
+          "id": "c6d10147-288c-4db0-906b-a5e96578a796",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 1978,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "Microsoft365利用料",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T08:55:49.692Z",
+      "updatedAt": "2026-01-02T09:15:14.833Z"
+    },
+    {
+      "id": "d1e759c5-6d76-4076-af3c-93f29d59abb1",
+      "date": "2025-11-27",
+      "lines": [
+        {
+          "id": "21e4fab1-0b1f-4a3f-9138-90d8b43a31a7",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 4560,
+          "taxCategory": "na"
+        },
+        {
+          "id": "fbee4c89-e5f8-4f11-b47f-b4cd6318e6cd",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 4560,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "無線マウス",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T08:55:11.160Z",
+      "updatedAt": "2026-01-02T08:55:40.724Z"
+    },
+    {
+      "id": "6b50eb91-a67c-4c1e-9ffd-eb8b0557018d",
+      "date": "2025-11-27",
+      "lines": [
+        {
+          "id": "4d98a7b4-6577-4ed2-b59c-b94a4449aa04",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 15532,
+          "taxCategory": "na"
+        },
+        {
+          "id": "0b963f15-e58e-40b2-8c9c-a3994e917e4b",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 15532,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "株式会社ゴールドポイントマーケティング",
+      "description": "Claude利用料",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T08:53:16.232Z",
+      "updatedAt": "2026-01-02T08:54:49.283Z"
+    },
+    {
+      "id": "dd71798f-8d23-4b58-b871-9adf1848cf1f",
+      "date": "2025-11-26",
+      "lines": [
+        {
+          "id": "f49ec6f2-f5e1-40ba-8e23-ea934a0559a6",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 1489,
+          "taxCategory": "na"
+        },
+        {
+          "id": "7fdcbbc3-ad35-40d0-b07f-fc5c647b1aaa",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 1489,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "三井住友カード",
+      "description": "OCN利用料",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T08:48:47.243Z",
+      "updatedAt": "2026-01-02T08:49:18.916Z"
+    },
+    {
+      "id": "db6760d5-6205-4165-a2f8-2f998d6428a2",
+      "date": "2025-11-26",
+      "lines": [
+        {
+          "id": "376b8c21-95c0-479e-81dc-e61d03501fa6",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 6490,
+          "taxCategory": "na"
+        },
+        {
+          "id": "a69ecad0-f9df-441c-85ec-44543981c7c8",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 6490,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "三井住友カード",
+      "description": "NTTフレッツ光料金",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T08:42:51.680Z",
+      "updatedAt": "2026-01-02T08:46:06.038Z"
+    },
+    {
+      "id": "fa6a2561-69d5-4df1-bc25-331f346398a8",
+      "date": "2025-11-26",
+      "lines": [
+        {
+          "id": "6e4158c9-7ad5-4555-9d24-a7f3b0713b72",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 278,
+          "taxCategory": "na"
+        },
+        {
+          "id": "94aa3f89-71ee-4ccb-802e-4928376a6c70",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 278,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "三井住友カード",
+      "description": "AWS利用料",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T08:36:33.830Z",
+      "updatedAt": "2026-01-02T10:25:10.826Z"
+    },
+    {
+      "id": "e49723d1-243a-4941-b37b-ed70a41ee264",
+      "date": "2025-11-26",
+      "lines": [
+        {
+          "id": "7cf7816c-3b25-45f5-b255-2ad522765bb1",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 10242,
+          "taxCategory": "na"
+        },
+        {
+          "id": "289b8722-bfef-45d4-a7f3-1463d20a10fd",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 10242,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "三井住友カード",
+      "description": "電気代、ガス代",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T08:33:52.077Z",
+      "updatedAt": "2026-01-02T08:47:36.963Z"
+    },
+    {
+      "id": "6d84f8d9-b63b-40a7-8474-b1ec920f3d2d",
+      "date": "2025-11-26",
+      "lines": [
+        {
+          "id": "5fab27b0-3f11-4eb7-9ac8-3d66de8f6eee",
+          "type": "debit",
+          "accountCode": "2004",
+          "amount": 1089,
+          "taxCategory": "na"
+        },
+        {
+          "id": "046bd786-260d-48b6-aac9-f6c72ecd9f99",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 1089,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "三井住友カード",
+      "description": "簿記の書籍代",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T08:32:25.509Z",
+      "updatedAt": "2026-02-17T18:35:12.640Z"
+    },
+    {
+      "id": "922e0c6b-819b-404e-8a5d-0ef280e3cde0",
+      "date": "2025-11-19",
+      "lines": [
+        {
+          "id": "b1e6178a-c351-48c8-aa2b-4c18dd752fe9",
+          "type": "debit",
+          "accountCode": "5004",
+          "amount": 1927,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 5841,
+          "_businessRatio": 33
+        },
+        {
+          "id": "11eca2e4-b613-4095-8a17-2f99666bc32c",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 3914,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "60c4780b-e9ba-46d4-b950-2a2b8dbd62d9",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 5841,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "水道局",
+      "description": "水道代",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "10f045dd-9f97-4f24-b510-0a7c5ff2a466",
+          "journalEntryId": "922e0c6b-819b-404e-8a5d-0ef280e3cde0",
+          "documentDate": "2025-11-19",
+          "documentType": "bill",
+          "originalName": "20251124_5841_suidou_meterdata_08-012283-05_20251124072540.pdf",
+          "generatedName": "2025-11-19_請求書_水道代_1,927円_水道局.pdf",
+          "mimeType": "application/pdf",
+          "size": 50648,
+          "description": "水道代",
+          "amount": 1927,
+          "vendor": "水道局",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-19_請求書_水道代_1,927円_水道局.pdf",
+          "createdAt": "2026-02-17T15:59:48.557Z"
+        }
+      ],
+      "createdAt": "2026-01-02T08:31:22.726Z",
+      "updatedAt": "2026-02-17T15:59:48.558Z"
+    },
+    {
+      "id": "840dd0d0-83b0-46fd-aedc-31c60a005df2",
+      "date": "2025-11-19",
+      "lines": [
+        {
+          "id": "027aaa5a-03a1-4abf-9449-eee3635d1762",
+          "type": "debit",
+          "accountCode": "5004",
+          "amount": 789,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 2392,
+          "_businessRatio": 33
+        },
+        {
+          "id": "1e1806c0-3adf-42bc-ba19-8e726dcb9a7e",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 1603,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "b9528a90-7d01-4b29-9684-e1845e90910c",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 2392,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "東京電力エナジーパートナー",
+      "description": "ガス代",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "4d9fdade-2bee-45b3-817b-447b83d88a7e",
+          "journalEntryId": "840dd0d0-83b0-46fd-aedc-31c60a005df2",
+          "documentDate": "2025-11-19",
+          "documentType": "bill",
+          "originalName": "20251119_2392_東京電力エナジーパートナー_21-00168-76501_とくとくガスプラン_2025年11月分.pdf",
+          "generatedName": "2025-11-19_請求書_ガス代_789円_東京電力エナジーパートナー.pdf",
+          "mimeType": "application/pdf",
+          "size": 67382,
+          "description": "ガス代",
+          "amount": 789,
+          "vendor": "東京電力エナジーパートナー",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-19_請求書_ガス代_789円_東京電力エナジーパートナー.pdf",
+          "createdAt": "2026-01-02T08:31:05.135Z"
+        }
+      ],
+      "createdAt": "2026-01-02T08:30:18.264Z",
+      "updatedAt": "2026-01-03T01:33:41.786Z"
+    },
+    {
+      "id": "46bd7e4e-db3b-414c-bfc5-03855f19ab9e",
+      "date": "2025-11-19",
+      "lines": [
+        {
+          "id": "8295cac7-038c-46a7-935c-051d671f56f9",
+          "type": "debit",
+          "accountCode": "5004",
+          "amount": 2303,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 6979,
+          "_businessRatio": 33
+        },
+        {
+          "id": "e8f39358-ad95-4766-90fa-7821fdba3764",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 4676,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "44555f7b-a58b-464a-86c8-5e705ee81088",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 6979,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "東京電力エナジーパートナー",
+      "description": "電気代",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "807f91c8-44bc-403f-9b0e-ddecb9b0f8ab",
+          "journalEntryId": "46bd7e4e-db3b-414c-bfc5-03855f19ab9e",
+          "documentDate": "2025-11-19",
+          "documentType": "bill",
+          "originalName": "20251119_6979_東京電力エナジーパートナー_21-00168-78989_スタンダードＳ_2025年11月分.pdf",
+          "generatedName": "2025-11-19_請求書_電気代_2,303円_東京電力エナジーパートナー.pdf",
+          "mimeType": "application/pdf",
+          "size": 75624,
+          "description": "電気代",
+          "amount": 2303,
+          "vendor": "東京電力エナジーパートナー",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-19_請求書_電気代_2,303円_東京電力エナジーパートナー.pdf",
+          "createdAt": "2026-01-02T07:36:18.426Z"
+        }
+      ],
+      "createdAt": "2026-01-02T07:35:11.196Z",
+      "updatedAt": "2026-02-21T06:52:36.053Z"
+    },
+    {
+      "id": "21a73e6c-c797-445f-9aad-9dc72aa6d110",
+      "date": "2025-11-17",
+      "lines": [
+        {
+          "id": "5bb7cbb9-3ddb-45a9-b84b-ce2dff8b5e66",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 15818
+        },
+        {
+          "id": "4737e98d-c5e0-4d27-9398-84fa5fb22e5a",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 15818,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Anthropic",
+      "description": "Claude利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "af926c0b-ebe6-439f-8547-de5c49bd8fba",
+          "journalEntryId": "21a73e6c-c797-445f-9aad-9dc72aa6d110",
+          "documentDate": "2025-11-17",
+          "documentType": "bill",
+          "originalName": "20251117_15818_Anthropic_Invoice-A80909DB-0012.pdf",
+          "generatedName": "2025-11-17_請求書_Claude利用料_15,932円_Anthropic.pdf",
+          "mimeType": "application/pdf",
+          "size": 55970,
+          "description": "Claude利用料",
+          "amount": 15932,
+          "vendor": "Anthropic",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-17_請求書_Claude利用料_15,932円_Anthropic.pdf",
+          "createdAt": "2026-01-02T07:31:01.491Z"
+        },
+        {
+          "id": "4849ad29-2bab-4519-a50c-d70380a2a4a2",
+          "journalEntryId": "21a73e6c-c797-445f-9aad-9dc72aa6d110",
+          "documentDate": "2025-11-17",
+          "documentType": "receipt",
+          "originalName": "20251117_15818_Anthropic_Receipt-2989-1637-3346.pdf",
+          "generatedName": "2025-11-17_領収書_Claude利用料_15,818円_Anthropic.pdf",
+          "mimeType": "application/pdf",
+          "size": 55711,
+          "description": "Claude利用料",
+          "amount": 15818,
+          "vendor": "Anthropic",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-17_領収書_Claude利用料_15,818円_Anthropic.pdf",
+          "createdAt": "2026-02-17T02:51:32.024Z"
+        }
+      ],
+      "createdAt": "2026-01-02T07:30:10.453Z",
+      "updatedAt": "2026-02-21T06:52:35.909Z"
+    },
+    {
+      "id": "dfda1024-9206-44fc-81f1-6594840c37d5",
+      "date": "2025-11-16",
+      "lines": [
+        {
+          "id": "251a6bb2-7216-4f0a-887f-977b6eafa5a3",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 220,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "004d4bd9-1262-4617-826a-e1706e0f1c2f",
+          "type": "credit",
+          "accountCode": "1001",
+          "amount": 220,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "",
+      "description": "清掃用品",
+      "evidenceStatus": "paper",
+      "attachments": [],
+      "createdAt": "2026-01-02T07:29:05.865Z",
+      "updatedAt": "2026-01-02T07:29:59.635Z"
+    },
+    {
+      "id": "8d9c6c94-8174-4e4d-99cb-d35bbfd57ce1",
+      "date": "2025-11-15",
+      "lines": [
+        {
+          "id": "30a7108c-626f-42b4-8dca-057c5d927bcb",
+          "type": "debit",
+          "accountCode": "5006",
+          "amount": 2141,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 6490,
+          "_businessRatio": 33
+        },
+        {
+          "id": "b69b4348-be5b-4dfe-b8a4-ba0e2670c25b",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 4349,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "907b9b24-d773-4543-ba46-f7dafe3a479d",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 6490,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "NTT",
+      "description": "NTTフレッツ光料金",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "85365ae0-1730-4d83-a508-15b496aafc48",
+          "journalEntryId": "8d9c6c94-8174-4e4d-99cb-d35bbfd57ce1",
+          "documentDate": "2025-11-15",
+          "documentType": "bill",
+          "originalName": "20251115_6490_NTT_適格請求書_202511_定期_0001_20251124085415404.pdf",
+          "generatedName": "2025-11-15_請求書_NTTフレッツ光料金_2,141円_NTT.pdf",
+          "mimeType": "application/pdf",
+          "size": 43852,
+          "description": "NTTフレッツ光料金",
+          "amount": 2141,
+          "vendor": "NTT",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-15_請求書_NTTフレッツ光料金_2,141円_NTT.pdf",
+          "createdAt": "2026-01-02T07:22:19.389Z"
+        }
+      ],
+      "createdAt": "2026-01-02T07:20:54.996Z",
+      "updatedAt": "2026-01-03T01:33:41.819Z"
+    },
+    {
+      "id": "41efd069-2192-444a-8765-42ffa26981be",
+      "date": "2025-11-12",
+      "lines": [
+        {
+          "id": "9ad92ea6-56cf-41c1-a42e-34bcd76e2e3f",
+          "type": "debit",
+          "accountCode": "5101",
+          "amount": 110
+        },
+        {
+          "id": "93d33b7b-575e-4ce4-bc55-e6acbe3d6da9",
+          "type": "credit",
+          "accountCode": "1001",
+          "amount": 110,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "郵便局",
+      "description": "郵便送料",
+      "evidenceStatus": "paper",
+      "attachments": [],
+      "createdAt": "2026-01-02T07:20:06.230Z",
+      "updatedAt": "2026-01-02T07:20:45.296Z"
+    },
+    {
+      "id": "e4e9572e-b0fa-4d9b-9d89-91632142fd0f",
+      "date": "2025-11-11",
+      "lines": [
+        {
+          "id": "9dd3ac85-09cc-43b8-81b5-a847d6318970",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 630
+        },
+        {
+          "id": "67b60a1e-3a0d-4523-a54e-f961f494783f",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 630,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "DeepL",
+      "description": "DeepL利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "faa29e66-c5ce-4c50-8cc7-5f94e9512236",
+          "journalEntryId": "e4e9572e-b0fa-4d9b-9d89-91632142fd0f",
+          "documentDate": "2025-11-11",
+          "documentType": "bill",
+          "originalName": "20251111_630_DeepL_invoice_DI-20251111-7571.pdf",
+          "generatedName": "2025-11-11_請求書_DeepL利用料_630円_DeepL.pdf",
+          "mimeType": "application/pdf",
+          "size": 81031,
+          "description": "DeepL利用料",
+          "amount": 630,
+          "vendor": "DeepL",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-11_請求書_DeepL利用料_630円_DeepL.pdf",
+          "createdAt": "2026-01-02T07:18:31.147Z"
+        }
+      ],
+      "createdAt": "2026-01-02T07:17:23.740Z",
+      "updatedAt": "2026-01-03T01:33:44.012Z"
+    },
+    {
+      "id": "82a862df-95d7-4db0-94b3-7be738e0d978",
+      "date": "2025-11-08",
+      "lines": [
+        {
+          "id": "2442dada-ff9a-4251-a83f-32d3e0daf2f4",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 10,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "9420caab-ea26-43d8-bb59-4bf7055e6d49",
+          "type": "credit",
+          "accountCode": "1001",
+          "amount": 10,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "",
+      "description": "コピー代",
+      "evidenceStatus": "paper",
+      "attachments": [],
+      "createdAt": "2026-01-02T07:11:52.494Z",
+      "updatedAt": "2026-01-02T07:12:24.068Z"
+    },
+    {
+      "id": "e4349bdb-0dd7-43cb-8f0b-f49a3bb18292",
+      "date": "2025-11-08",
+      "lines": [
+        {
+          "id": "b5718864-4950-4878-84d1-986c9d0cfe46",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 50,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "edda982f-fe9e-46c4-a919-97e31b9e52d8",
+          "type": "credit",
+          "accountCode": "1001",
+          "amount": 50,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "",
+      "description": "コピー代",
+      "evidenceStatus": "paper",
+      "attachments": [],
+      "createdAt": "2026-01-02T07:09:25.160Z",
+      "updatedAt": "2026-01-02T07:10:29.775Z"
+    },
+    {
+      "id": "089daa6f-ec09-47f7-aec8-b85f566a6508",
+      "date": "2025-11-03",
+      "lines": [
+        {
+          "id": "26079a29-4007-4d06-8ebf-0bc1e40f5643",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 3900,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "0d1218a5-a67c-4586-9e7c-3d976e38fa97",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 3900,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Apple",
+      "description": "会計アプリ aoiro",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "1b411d5f-23c4-4e0f-ae01-12b3572034a0",
+          "journalEntryId": "089daa6f-ec09-47f7-aec8-b85f566a6508",
+          "documentDate": "2025-11-03",
+          "documentType": "receipt",
+          "originalName": "20251103_3900_Apple-MN7N96V2GY-856043822519.pdf",
+          "generatedName": "2025-11-03_領収書_会計アプリ aoiro_3,900円_Apple.pdf",
+          "mimeType": "application/pdf",
+          "size": 134013,
+          "description": "会計アプリ aoiro",
+          "amount": 3900,
+          "vendor": "Apple",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-03_領収書_会計アプリ aoiro_3,900円_Apple.pdf",
+          "createdAt": "2026-01-02T06:09:40.830Z"
+        }
+      ],
+      "createdAt": "2026-01-02T06:08:40.687Z",
+      "updatedAt": "2026-02-21T06:52:35.773Z"
+    },
+    {
+      "id": "2b691d72-d8ad-49c7-81ea-e5b0c4597447",
+      "date": "2025-11-01",
+      "lines": [
+        {
+          "id": "26f1c928-704e-4cac-abd8-81bb54e30f58",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 278,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "93de8bd7-869c-4c05-835a-d4ed8a9002c0",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 278,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "AWS",
+      "description": "AWS利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "d0bf4d79-a765-4367-8717-8c627448e4a5",
+          "journalEntryId": "2b691d72-d8ad-49c7-81ea-e5b0c4597447",
+          "documentDate": "2025-11-01",
+          "documentType": "bill",
+          "originalName": "20251101_278_AWS_Invoice_JPIN25_3770580.pdf",
+          "generatedName": "2025-11-01_請求書_AWS利用料_278円_AWS.pdf",
+          "mimeType": "application/pdf",
+          "size": 69073,
+          "description": "AWS利用料",
+          "amount": 278,
+          "vendor": "AWS",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-11-01_請求書_AWS利用料_278円_AWS.pdf",
+          "createdAt": "2026-01-02T05:54:53.978Z"
+        }
+      ],
+      "createdAt": "2026-01-02T05:54:00.279Z",
+      "updatedAt": "2026-02-21T06:52:35.949Z"
+    },
+    {
+      "date": "2025-10-31",
+      "lines": [
+        {
+          "id": "1efd9599-4b89-4c34-9089-0d81fda776fe",
+          "type": "debit",
+          "accountCode": "1005",
+          "amount": 482141,
+          "taxCategory": "na"
+        },
+        {
+          "id": "f0a15366-1aff-422a-b662-433660ad834f",
+          "type": "credit",
+          "accountCode": "4001",
+          "amount": 482141,
+          "taxCategory": "sales_10"
+        }
+      ],
+      "description": "BIMツール開発支援",
+      "vendor": "株式会社ヘルスベイシス",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "35ace424-bba6-4976-a030-e9a09ab7c503",
+          "journalEntryId": "febf7a80-4a36-4b15-a6f9-c67ead519ea8",
+          "documentDate": "2025-10-31",
+          "documentType": "bill",
+          "originalName": "20251031_482141_ヘルスベイシス_BIMツール開発支援_請求書-202510.pdf",
+          "generatedName": "2025-10-31_請求書_BIMツール開発支援_482,141円_株式会社ヘルスベイシス.pdf",
+          "mimeType": "application/pdf",
+          "size": 497829,
+          "description": "BIMツール開発支援",
+          "amount": 482141,
+          "vendor": "株式会社ヘルスベイシス",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-31_請求書_BIMツール開発支援_482,141円_株式会社ヘルスベイシス.pdf",
+          "createdAt": "2026-01-06T23:40:33.007Z"
+        }
+      ],
+      "id": "febf7a80-4a36-4b15-a6f9-c67ead519ea8",
+      "createdAt": "2026-01-06T23:38:21.584Z",
+      "updatedAt": "2026-02-17T18:32:32.843Z"
+    },
+    {
+      "id": "aabdf7ed-7e0c-41b0-b154-f9ae1d4e7eca",
+      "date": "2025-10-28",
+      "lines": [
+        {
+          "id": "31c396c4-843a-42f8-b9e2-23953d437b3e",
+          "type": "debit",
+          "accountCode": "5006",
+          "amount": 491,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 1489,
+          "_businessRatio": 33
+        },
+        {
+          "id": "25593985-22e6-494d-8130-9433cdd8164e",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 998,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "891a961e-2e04-46c1-8dd3-6eb6cbaa5781",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 1489,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "ＮＴＴドコモビジネス",
+      "description": "OCN利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "78b32e6a-67ee-4ab0-8f26-95dee66f5e1b",
+          "journalEntryId": "aabdf7ed-7e0c-41b0-b154-f9ae1d4e7eca",
+          "documentDate": "2025-10-28",
+          "documentType": "bill",
+          "originalName": "20251028_OCN_請求内訳印刷.pdf",
+          "generatedName": "2025-10-28_請求書_OCN利用料_491円_ＮＴＴドコモビジネス.pdf",
+          "mimeType": "application/pdf",
+          "size": 165242,
+          "description": "OCN利用料",
+          "amount": 491,
+          "vendor": "ＮＴＴドコモビジネス",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-28_請求書_OCN利用料_491円_ＮＴＴドコモビジネス.pdf",
+          "createdAt": "2026-01-02T05:45:49.690Z"
+        }
+      ],
+      "createdAt": "2026-01-02T05:43:55.796Z",
+      "updatedAt": "2026-02-17T17:33:04.432Z"
+    },
+    {
+      "id": "edf5ed16-26c3-414f-ada2-46e4d4e1bc31",
+      "date": "2025-10-28",
+      "lines": [
+        {
+          "id": "1d6e52e1-7ab8-4163-b0f9-042b36a56cee",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 1978,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "5b9212a3-4497-4a81-b5d8-5ab4938497ff",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 1978,
+          "taxCategory": "na"
+        }
+      ],
+      "vendor": "Microsoft",
+      "description": "Microsoft365利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "59890260-c0ab-4961-a54c-702a51590155",
+          "journalEntryId": "edf5ed16-26c3-414f-ada2-46e4d4e1bc31",
+          "documentDate": "2025-10-28",
+          "documentType": "bill",
+          "originalName": "20251028_1978_Microsoft_G120915420_ed1664b0c64145c9a39aa1566331decc.pdf",
+          "generatedName": "2025-10-28_請求書_Microsoft365利用料_1,978円_Microsoft.pdf",
+          "mimeType": "application/pdf",
+          "size": 249098,
+          "description": "Microsoft365利用料",
+          "amount": 1978,
+          "vendor": "Microsoft",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-28_請求書_Microsoft365利用料_1,978円_Microsoft.pdf",
+          "createdAt": "2026-01-02T05:43:22.203Z"
+        }
+      ],
+      "createdAt": "2026-01-02T05:42:43.381Z",
+      "updatedAt": "2026-02-17T17:46:11.545Z"
+    },
+    {
+      "id": "050424b2-6c8c-4660-afb0-220e0aa58c3f",
+      "date": "2025-10-27",
+      "lines": [
+        {
+          "id": "14acb247-4e83-40a1-8a1e-758da0317e62",
+          "type": "debit",
+          "accountCode": "5017",
+          "amount": 17149,
+          "_businessRatioApplied": true,
+          "_originalAmount": 114330,
+          "_businessRatio": 15
+        },
+        {
+          "id": "565d9c88-b975-4d61-a2ca-dba0cb4776ed",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 97181,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "3665e776-38bb-45cd-9471-1fb145401115",
+          "type": "credit",
+          "accountCode": "1003",
+          "amount": 114330
+        }
+      ],
+      "vendor": "",
+      "description": "家賃",
+      "evidenceStatus": "none",
+      "attachments": [],
+      "createdAt": "2026-01-02T05:03:38.001Z",
+      "updatedAt": "2026-01-08T09:44:14.871Z"
+    },
+    {
+      "id": "6df680af-b884-4cd0-885e-a685b125143c",
+      "date": "2025-10-27",
+      "lines": [
+        {
+          "id": "d69a0262-cce9-4ba5-8cd0-cf71eaa6fff2",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 3442,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "575cd56f-0773-4cc0-9424-8dffe1339cd6",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 3442
+        }
+      ],
+      "vendor": "OpenAI",
+      "description": "OpenAI利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "512afcad-9961-4425-b4e2-a2c6c5fb39db",
+          "journalEntryId": "6df680af-b884-4cd0-885e-a685b125143c",
+          "documentDate": "2025-10-27",
+          "documentType": "bill",
+          "originalName": "20251027_3442_OpenAI_Invoice-50BDBD36-0030.pdf",
+          "generatedName": "2025-10-27_請求書_OpenAI利用料_3,442円_OpenAI.pdf",
+          "mimeType": "application/pdf",
+          "size": 51452,
+          "description": "OpenAI利用料",
+          "amount": 3442,
+          "vendor": "OpenAI",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-27_請求書_OpenAI利用料_3,442円_OpenAI.pdf",
+          "createdAt": "2026-01-02T05:02:31.028Z"
+        }
+      ],
+      "createdAt": "2026-01-02T05:01:36.025Z",
+      "updatedAt": "2026-02-17T17:46:09.049Z"
+    },
+    {
+      "id": "2df3581c-0233-48c9-8016-56a49510ae98",
+      "date": "2025-10-23",
+      "lines": [
+        {
+          "id": "fc795097-06a9-4de9-8866-0e114b91e5c5",
+          "type": "debit",
+          "accountCode": "5007",
+          "amount": 429,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "dd63d028-6861-4592-9399-ee8f330cd405",
+          "type": "credit",
+          "accountCode": "1001",
+          "amount": 429
+        }
+      ],
+      "vendor": "",
+      "description": "名刺作成代",
+      "evidenceStatus": "paper",
+      "attachments": [],
+      "createdAt": "2026-01-02T05:00:06.953Z",
+      "updatedAt": "2026-02-17T18:29:02.945Z"
+    },
+    {
+      "id": "7a9c71b4-59ad-486f-9044-c04be3397bc8",
+      "date": "2025-10-21",
+      "lines": [
+        {
+          "id": "46ce8fc1-1eb6-4714-8eba-637e0c4e5f8a",
+          "type": "debit",
+          "accountCode": "5004",
+          "amount": 608,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 1843,
+          "_businessRatio": 33
+        },
+        {
+          "id": "f4e3efe3-1eef-4497-aee8-244fc770ae62",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 1235,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "7045a5eb-4a14-48c3-8337-ef581ca03ec6",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 1843
+        }
+      ],
+      "vendor": "東京電力エナジーパートナー",
+      "description": "ガス代",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "d36d25a8-1ffb-4792-9749-9acd5e0420ee",
+          "journalEntryId": "7a9c71b4-59ad-486f-9044-c04be3397bc8",
+          "documentDate": "2025-10-21",
+          "documentType": "bill",
+          "originalName": "20251021_1843_東京電力エナジーパートナー_21-00168-76501_とくとくガスプラン_2025年10月分.pdf",
+          "generatedName": "2025-10-21_請求書_ガス代_608円_東京電力エナジーパートナー.pdf",
+          "mimeType": "application/pdf",
+          "size": 71690,
+          "description": "ガス代",
+          "amount": 608,
+          "vendor": "東京電力エナジーパートナー",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-21_請求書_ガス代_608円_東京電力エナジーパートナー.pdf",
+          "createdAt": "2026-01-02T04:59:29.880Z"
+        }
+      ],
+      "createdAt": "2026-01-02T04:58:29.392Z",
+      "updatedAt": "2026-02-17T18:28:54.666Z"
+    },
+    {
+      "id": "b3c91e7d-0a8b-4621-8639-bd681d7dfab3",
+      "date": "2025-10-21",
+      "lines": [
+        {
+          "id": "2b9e2fbb-fe2f-4ae8-89a1-ea39c336dc68",
+          "type": "debit",
+          "accountCode": "5004",
+          "amount": 2771,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 8399,
+          "_businessRatio": 33
+        },
+        {
+          "id": "018166e9-54bd-4f38-a98f-789f56a20329",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 5628,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "03b28807-d670-4bab-aa7e-1324d0d0a1f9",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 8399
+        }
+      ],
+      "vendor": "東京電力エナジーパートナー",
+      "description": "電気代",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "abeaa4e5-b24c-4fa3-ab44-4cbb9c4eac69",
+          "journalEntryId": "b3c91e7d-0a8b-4621-8639-bd681d7dfab3",
+          "documentDate": "2025-10-21",
+          "documentType": "bill",
+          "originalName": "20251021_8399_東京電力エナジーパートナー_21-00168-78989_スタンダードＳ_2025年10月分.pdf",
+          "generatedName": "2025-10-21_請求書_電気代_2,771円_東京電力エナジーパートナー.pdf",
+          "mimeType": "application/pdf",
+          "size": 78571,
+          "description": "電気代",
+          "amount": 2771,
+          "vendor": "東京電力エナジーパートナー",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-21_請求書_電気代_2,771円_東京電力エナジーパートナー.pdf",
+          "createdAt": "2026-01-01T23:00:00.677Z"
+        }
+      ],
+      "createdAt": "2026-01-01T22:32:06.613Z",
+      "updatedAt": "2026-02-17T18:28:28.790Z"
+    },
+    {
+      "id": "10200f4f-54e7-4ab9-99d3-07bee7d65857",
+      "date": "2025-10-17",
+      "lines": [
+        {
+          "id": "058943bb-92af-4dfd-b166-bd76c5da00b4",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 15532,
+          "taxCategory": "na"
+        },
+        {
+          "id": "79149562-66b8-4157-af85-0dcbd5108786",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 15532
+        }
+      ],
+      "vendor": "Anthropic",
+      "description": "Claude利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "5b618b6a-124c-4a1e-9196-6fa8c843bfa2",
+          "journalEntryId": "10200f4f-54e7-4ab9-99d3-07bee7d65857",
+          "documentDate": "2025-10-17",
+          "documentType": "bill",
+          "originalName": "20251017_15532_Anthropic_Invoice-A80909DB-0011.pdf",
+          "generatedName": "2025-10-17_請求書_Claude利用料_15,532円_Anthropic.pdf",
+          "mimeType": "application/pdf",
+          "size": 56017,
+          "description": "Claude利用料",
+          "amount": 15532,
+          "vendor": "Anthropic",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-17_請求書_Claude利用料_15,532円_Anthropic.pdf",
+          "createdAt": "2026-01-01T21:51:13.354Z"
+        },
+        {
+          "id": "beb73572-99f1-42d1-8fbc-85bdfc4e9788",
+          "journalEntryId": "10200f4f-54e7-4ab9-99d3-07bee7d65857",
+          "documentDate": "2025-10-17",
+          "documentType": "receipt",
+          "originalName": "20251017_15532_Anthropic_Receipt-2049-4976-7213.pdf",
+          "generatedName": "2025-10-17_領収書_Claude利用料_15,532円_Anthropic.pdf",
+          "mimeType": "application/pdf",
+          "size": 55743,
+          "description": "Claude利用料",
+          "amount": 15532,
+          "vendor": "Anthropic",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-17_領収書_Claude利用料_15,532円_Anthropic.pdf",
+          "createdAt": "2026-02-17T02:51:42.956Z"
+        }
+      ],
+      "createdAt": "2026-01-01T21:49:57.717Z",
+      "updatedAt": "2026-02-21T06:52:35.843Z"
+    },
+    {
+      "id": "469a3c95-8f22-41c7-a4a8-f6a3f61d4eba",
+      "date": "2025-10-14",
+      "lines": [
+        {
+          "id": "8613e45e-6884-4d2e-bc28-7679e42be7e9",
+          "type": "debit",
+          "accountCode": "5006",
+          "amount": 2141,
+          "taxCategory": "purchase_10",
+          "_businessRatioApplied": true,
+          "_originalAmount": 6490,
+          "_businessRatio": 33
+        },
+        {
+          "id": "9c93f62a-cc3a-4b54-9b9e-779038daef6d",
+          "type": "debit",
+          "accountCode": "3002",
+          "amount": 4349,
+          "taxCategory": "na",
+          "_businessRatioGenerated": true
+        },
+        {
+          "id": "3074f388-8f77-4565-959b-9e20b3162d66",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 6490
+        }
+      ],
+      "vendor": "NTT",
+      "description": "NTTフレッツ光料金",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "5e203a58-ea09-4d43-936d-729bcd8dd77e",
+          "journalEntryId": "469a3c95-8f22-41c7-a4a8-f6a3f61d4eba",
+          "documentDate": "2025-10-14",
+          "documentType": "bill",
+          "originalName": "20251014_6490_NTT_適格請求書_202510_定期_0001_20251124085415566.pdf",
+          "generatedName": "2025-10-14_請求書_NTTフレッツ光料金_2,141円_NTT.pdf",
+          "mimeType": "application/pdf",
+          "size": 43853,
+          "description": "NTTフレッツ光料金",
+          "amount": 2141,
+          "vendor": "NTT",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-14_請求書_NTTフレッツ光料金_2,141円_NTT.pdf",
+          "createdAt": "2026-01-01T20:48:53.613Z"
+        }
+      ],
+      "createdAt": "2026-01-01T20:47:45.429Z",
+      "updatedAt": "2026-02-21T06:52:36.044Z"
+    },
+    {
+      "id": "8474b052-770e-4a25-88db-4dd4cf036b2f",
+      "date": "2025-10-13",
+      "lines": [
+        {
+          "id": "254cbd85-6b7f-455e-b12f-22b67f7673be",
+          "type": "debit",
+          "accountCode": "5021",
+          "amount": 1089,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "a2774289-c7c4-4636-bcd1-6edfdfed5501",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 1089
+        }
+      ],
+      "vendor": "Amazon",
+      "description": "簿記の書籍代",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "31d204fe-6e6f-4bb6-8b3f-48680a64b6ad",
+          "journalEntryId": "8474b052-770e-4a25-88db-4dd4cf036b2f",
+          "documentDate": "2025-10-13",
+          "documentType": "bill",
+          "originalName": "20251013_1089_Amazon_書籍_invoice_D01-7567930-4722600.pdf",
+          "generatedName": "2025-10-13_請求書_簿記の書籍代_1,089円_Amazon.pdf",
+          "mimeType": "application/pdf",
+          "size": 62108,
+          "description": "簿記の書籍代",
+          "amount": 1089,
+          "vendor": "Amazon",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-13_請求書_簿記の書籍代_1,089円_Amazon.pdf",
+          "createdAt": "2026-01-01T20:45:32.663Z"
+        }
+      ],
+      "createdAt": "2026-01-01T20:44:32.387Z",
+      "updatedAt": "2026-02-17T18:02:35.784Z"
+    },
+    {
+      "id": "74a72546-9542-41f9-ae65-607d46eb6fdd",
+      "date": "2025-10-06",
+      "lines": [
+        {
+          "id": "1d5ab39b-bd88-42db-8790-d26c15aecc4b",
+          "type": "debit",
+          "accountCode": "5101",
+          "amount": 110
+        },
+        {
+          "id": "e5ebc077-9631-46c4-9f13-db48621cbf68",
+          "type": "credit",
+          "accountCode": "1001",
+          "amount": 110
+        }
+      ],
+      "vendor": "",
+      "description": "郵便送料",
+      "evidenceStatus": "paper",
+      "attachments": [],
+      "createdAt": "2026-01-01T20:43:32.582Z",
+      "updatedAt": "2026-01-02T05:01:10.317Z"
+    },
+    {
+      "id": "029bbc60-97e0-4463-af35-3e0ebb6c32d5",
+      "date": "2025-10-03",
+      "lines": [
+        {
+          "id": "d59c079d-bf1a-46c8-918c-7d9593c42e02",
+          "type": "debit",
+          "accountCode": "5011",
+          "amount": 4560,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "fa796d07-08ed-40e9-b773-664ae8f40a1e",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 4560
+        }
+      ],
+      "vendor": "Amazon",
+      "description": "無線マウス",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "1867712d-c3a1-448a-92ae-9d8a786937c4",
+          "journalEntryId": "029bbc60-97e0-4463-af35-3e0ebb6c32d5",
+          "documentDate": "2025-10-03",
+          "documentType": "bill",
+          "originalName": "20251003_4560_Amazon_無線マウス_invoice_503-0026527-9188642.pdf",
+          "generatedName": "2025-10-03_請求書_無線マウス_4,560円_Amazon.pdf",
+          "mimeType": "application/pdf",
+          "size": 43262,
+          "description": "無線マウス",
+          "amount": 4560,
+          "vendor": "Amazon",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-03_請求書_無線マウス_4,560円_Amazon.pdf",
+          "createdAt": "2026-01-01T20:43:22.626Z"
+        }
+      ],
+      "createdAt": "2026-01-01T20:42:27.580Z",
+      "updatedAt": "2026-02-21T06:52:35.715Z"
+    },
+    {
+      "id": "8777c0af-dc54-4bc4-88c6-7207d401eb48",
+      "date": "2025-10-01",
+      "lines": [
+        {
+          "id": "f43e99eb-a420-479b-82c0-bc701dbc2fa6",
+          "type": "debit",
+          "accountCode": "5100",
+          "amount": 278,
+          "taxCategory": "purchase_10"
+        },
+        {
+          "id": "fc035b22-bab3-49b4-9b69-b5c29e627a55",
+          "type": "credit",
+          "accountCode": "2004",
+          "amount": 278
+        }
+      ],
+      "vendor": "AWS",
+      "description": "AWS利用料",
+      "evidenceStatus": "digital",
+      "attachments": [
+        {
+          "id": "0d15e2db-7049-48e6-9043-921f48a8cf04",
+          "journalEntryId": "8777c0af-dc54-4bc4-88c6-7207d401eb48",
+          "documentDate": "2025-10-01",
+          "documentType": "bill",
+          "originalName": "20251001_278_AWS_Invoice_JPIN25_3316538.pdf",
+          "generatedName": "2025-10-01_請求書_AWS利用料_278円_AWS.pdf",
+          "mimeType": "application/pdf",
+          "size": 69152,
+          "description": "AWS利用料",
+          "amount": 278,
+          "vendor": "AWS",
+          "storageType": "filesystem",
+          "filePath": "2025/2025-10-01_請求書_AWS利用料_278円_AWS.pdf",
+          "createdAt": "2026-01-01T20:41:02.713Z"
+        }
+      ],
+      "createdAt": "2026-01-01T02:38:17.660Z",
+      "updatedAt": "2026-02-17T17:46:04.277Z"
+    }
+  ],
+  "accounts": [
+    {
+      "code": "1001",
+      "name": "現金",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1002",
+      "name": "当座預金",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1003",
+      "name": "普通預金",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1004",
+      "name": "定期預金",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1005",
+      "name": "売掛金",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1006",
+      "name": "未収入金",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1007",
+      "name": "棚卸資産",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1008",
+      "name": "前払費用",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1009",
+      "name": "前払金",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1010",
+      "name": "立替金",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1011",
+      "name": "仮払金",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1012",
+      "name": "仮払消費税",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1013",
+      "name": "貸付金",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1014",
+      "name": "建物",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1015",
+      "name": "建物附属設備",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1016",
+      "name": "機械装置",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1017",
+      "name": "車両運搬具",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1018",
+      "name": "工具器具備品",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1019",
+      "name": "土地",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1020",
+      "name": "ソフトウェア",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "1021",
+      "name": "敷金・保証金",
+      "type": "asset",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "2001",
+      "name": "買掛金",
+      "type": "liability",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "2002",
+      "name": "短期借入金",
+      "type": "liability",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "2003",
+      "name": "長期借入金",
+      "type": "liability",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "2004",
+      "name": "未払金",
+      "type": "liability",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "2005",
+      "name": "未払費用",
+      "type": "liability",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "2006",
+      "name": "未払消費税",
+      "type": "liability",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "2007",
+      "name": "前受金",
+      "type": "liability",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "2008",
+      "name": "預り金",
+      "type": "liability",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "2009",
+      "name": "源泉所得税預り金",
+      "type": "liability",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "2010",
+      "name": "仮受金",
+      "type": "liability",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "2011",
+      "name": "仮受消費税",
+      "type": "liability",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "3001",
+      "name": "元入金",
+      "type": "equity",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "3002",
+      "name": "事業主貸",
+      "type": "equity",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "3003",
+      "name": "事業主借",
+      "type": "equity",
+      "isSystem": true,
+      "defaultTaxCategory": "na",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "4001",
+      "name": "売上高",
+      "type": "revenue",
+      "isSystem": true,
+      "defaultTaxCategory": "sales_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "4002",
+      "name": "雑収入",
+      "type": "revenue",
+      "isSystem": true,
+      "defaultTaxCategory": "sales_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "4003",
+      "name": "受取利息",
+      "type": "revenue",
+      "isSystem": true,
+      "defaultTaxCategory": "exempt",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5001",
+      "name": "仕入高",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5002",
+      "name": "租税公課",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "out_of_scope",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5003",
+      "name": "荷造運賃",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5004",
+      "name": "水道光熱費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z",
+      "businessRatioEnabled": true,
+      "defaultBusinessRatio": 33
+    },
+    {
+      "code": "5005",
+      "name": "旅費交通費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5006",
+      "name": "通信費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z",
+      "businessRatioEnabled": true,
+      "defaultBusinessRatio": 33
+    },
+    {
+      "code": "5007",
+      "name": "広告宣伝費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5008",
+      "name": "接待交際費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5009",
+      "name": "損害保険料",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "exempt",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5010",
+      "name": "修繕費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5011",
+      "name": "消耗品費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5012",
+      "name": "減価償却費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "out_of_scope",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5013",
+      "name": "福利厚生費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5014",
+      "name": "給料賃金",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "out_of_scope",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5015",
+      "name": "外注工賃",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5016",
+      "name": "利子割引料",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "exempt",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5017",
+      "name": "地代家賃",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z",
+      "businessRatioEnabled": true,
+      "defaultBusinessRatio": 15
+    },
+    {
+      "code": "5018",
+      "name": "貸倒金",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "out_of_scope",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5019",
+      "name": "雑損失",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "out_of_scope",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5020",
+      "name": "雑費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5021",
+      "name": "新聞図書費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5022",
+      "name": "研修費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5023",
+      "name": "会議費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5024",
+      "name": "支払手数料",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5025",
+      "name": "諸会費",
+      "type": "expense",
+      "isSystem": true,
+      "defaultTaxCategory": "purchase_10",
+      "createdAt": "2026-01-02T11:46:19.750Z"
+    },
+    {
+      "code": "5100",
+      "name": "情報処理費",
+      "type": "expense",
+      "isSystem": false,
+      "createdAt": "2025-12-31T22:27:06.302Z"
+    },
+    {
+      "code": "5101",
+      "name": "送料",
+      "type": "expense",
+      "isSystem": false,
+      "createdAt": "2025-12-31T22:27:12.166Z"
+    },
+    {
+      "code": "5102",
+      "name": "通信機器購入費",
+      "type": "expense",
+      "isSystem": false,
+      "createdAt": "2025-12-31T22:27:16.001Z",
+      "businessRatioEnabled": true,
+      "defaultBusinessRatio": 33
+    }
+  ],
+  "vendors": [
+    {
+      "id": "783a6cae-2d4c-44d1-959d-7b3c6570b06e",
+      "name": "AWS",
+      "createdAt": "2026-01-01T02:26:12.878Z",
+      "updatedAt": "2026-01-01T02:26:12.878Z"
+    },
+    {
+      "id": "edd47f8f-2f6e-4c5e-93d3-548b1afd023b",
+      "name": "Amazon",
+      "createdAt": "2026-01-02T05:36:21.313Z",
+      "updatedAt": "2026-01-02T05:36:21.313Z"
+    },
+    {
+      "id": "2f2d7397-d6d7-4b1d-a74a-3cd763627df4",
+      "name": "Anthropic",
+      "createdAt": "2026-01-01T21:50:23.738Z",
+      "updatedAt": "2026-01-01T21:50:23.738Z"
+    },
+    {
+      "id": "10f6534a-7976-4f56-b761-d47268f8f02e",
+      "name": "Apple",
+      "createdAt": "2026-01-02T05:36:21.326Z",
+      "updatedAt": "2026-01-02T05:36:21.326Z"
+    },
+    {
+      "id": "5a8c9432-7b98-495f-a90d-01bff7805fe7",
+      "name": "Bitdefender",
+      "createdAt": "2026-02-17T03:30:39.475Z"
+    },
+    {
+      "id": "859f951a-eb8a-4606-8555-5ab9cc087801",
+      "name": "DeepL",
+      "createdAt": "2026-01-02T10:14:03.136Z",
+      "updatedAt": "2026-01-02T10:14:03.136Z"
+    },
+    {
+      "id": "6bc3cebe-d496-47e7-9296-0637d12734f9",
+      "name": "GMOデジロック",
+      "createdAt": "2026-02-16T22:35:52.407Z"
+    },
+    {
+      "id": "990a01ee-c27c-4f35-9ba6-9d91b75b1a00",
+      "name": "JR東日本",
+      "createdAt": "2026-01-02T05:36:21.318Z",
+      "updatedAt": "2026-01-02T05:36:21.318Z"
+    },
+    {
+      "id": "7784ecd1-ef6e-4aa3-9bc7-72b62fbd39ad",
+      "name": "Microsoft",
+      "createdAt": "2026-01-02T05:06:31.130Z",
+      "updatedAt": "2026-01-02T05:06:31.130Z"
+    },
+    {
+      "id": "75dd35d3-ff0e-49d7-8c0f-cf8cd88ad39a",
+      "name": "NTT",
+      "createdAt": "2026-01-02T07:22:07.072Z",
+      "updatedAt": "2026-01-02T07:22:07.072Z"
+    },
+    {
+      "id": "5bef22e8-a299-4f6a-a89f-698224d048d5",
+      "name": "NTTドコモ",
+      "createdAt": "2026-01-02T05:36:21.320Z",
+      "updatedAt": "2026-01-02T05:36:21.320Z"
+    },
+    {
+      "id": "ad0cf4c5-cf8b-46bc-9792-9693c4a240c7",
+      "name": "OCN",
+      "createdAt": "2026-02-17T17:32:59.937Z"
+    },
+    {
+      "id": "c2dd13d9-ba12-4718-8f63-0a4b4c144183",
+      "name": "OpenAI",
+      "createdAt": "2026-01-02T09:11:50.662Z",
+      "updatedAt": "2026-01-02T09:11:50.662Z"
+    },
+    {
+      "id": "321219bf-4daa-4e85-8f43-9381e04dd4c6",
+      "name": "さくらインターネット",
+      "createdAt": "2026-01-02T05:36:21.324Z",
+      "updatedAt": "2026-01-02T05:36:21.324Z"
+    },
+    {
+      "id": "934d642b-e626-488d-a6d0-bc90831ac8dd",
+      "name": "スターバックス",
+      "createdAt": "2026-01-02T05:36:21.316Z",
+      "updatedAt": "2026-01-02T05:36:21.316Z"
+    },
+    {
+      "id": "498dece9-0cfd-4fc5-9e1a-1bd2f70f7f1d",
+      "name": "モノタロウ",
+      "createdAt": "2026-01-02T05:36:21.323Z",
+      "updatedAt": "2026-01-02T05:36:21.323Z"
+    },
+    {
+      "id": "a7f7e4e4-ea81-4fe6-8fba-340ac1eef3ab",
+      "name": "ヨドバシカメラ",
+      "createdAt": "2026-01-02T05:36:21.319Z",
+      "updatedAt": "2026-01-02T05:36:21.319Z"
+    },
+    {
+      "id": "9ec30795-37f0-4d46-9dc2-282ab7d1eed9",
+      "name": "ヨドバシ・ゴールドポイントカード",
+      "createdAt": "2026-01-02T08:53:55.257Z",
+      "updatedAt": "2026-01-02T08:53:55.257Z"
+    },
+    {
+      "id": "9a06e7de-87f2-4d88-9e18-fd117cc9f144",
+      "name": "三井住友カード",
+      "createdAt": "2026-01-02T08:46:10.955Z",
+      "updatedAt": "2026-01-02T08:46:10.955Z"
+    },
+    {
+      "id": "c35d8ad1-29d3-4453-a28f-290ca35e66dc",
+      "name": "国税庁",
+      "createdAt": "2026-01-02T05:36:21.328Z",
+      "updatedAt": "2026-01-02T05:36:21.328Z"
+    },
+    {
+      "id": "82d03f0f-411d-48f5-a2bd-2073655990fe",
+      "name": "東京電力エナジーパートナー",
+      "createdAt": "2026-01-01T22:32:44.084Z",
+      "updatedAt": "2026-01-01T22:32:44.084Z"
+    },
+    {
+      "id": "7e9f5a4a-8ff0-46da-86bc-709d726fcfe3",
+      "name": "株式会社ゴールドポイントマーケティング",
+      "createdAt": "2026-01-02T08:54:29.596Z",
+      "updatedAt": "2026-01-02T08:54:29.596Z"
+    },
+    {
+      "id": "7b8129c8-ca0a-484e-8edf-0336b9a617e7",
+      "name": "株式会社ヘルスベイシス",
+      "createdAt": "2026-01-02T05:49:32.939Z",
+      "updatedAt": "2026-01-02T05:49:32.939Z"
+    },
+    {
+      "id": "2ead05f0-0a40-4207-903b-8751ccbd8c5e",
+      "name": "楽天",
+      "createdAt": "2026-01-02T05:36:21.327Z",
+      "updatedAt": "2026-01-02T05:36:21.327Z"
+    },
+    {
+      "id": "3cfc92e9-e302-427a-8813-0886ec7470d8",
+      "name": "水道局",
+      "createdAt": "2026-01-02T08:32:02.633Z",
+      "updatedAt": "2026-01-02T08:32:02.633Z"
+    },
+    {
+      "id": "69df8bc2-3495-49e6-bd03-f2ded77e4cea",
+      "name": "郵便局",
+      "createdAt": "2026-01-02T07:20:45.420Z",
+      "updatedAt": "2026-01-02T07:20:45.420Z"
+    },
+    {
+      "id": "af6c3a52-7067-4062-ae00-38e0b9237b77",
+      "name": "ＮＴＴドコモビジネス",
+      "createdAt": "2026-02-17T17:33:04.419Z"
+    }
+  ],
+  "settings": {
+    "fiscalYearStart": 1,
+    "defaultCurrency": "JPY",
+    "storageMode": "filesystem",
+    "autoPurgeBlobAfterExport": true,
+    "blobRetentionDays": 30
+  }
+}

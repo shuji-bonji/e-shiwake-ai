@@ -104,6 +104,16 @@ export function parseSearchQuery(query: string, accounts: Account[]): SearchCrit
 			continue;
 		}
 
+		// 4桁の数字で現実的な会計年度範囲（2010-2099）→ 年として解釈
+		// 2000-2009は金額（¥2,000等）と紛らわしいため除外
+		if (/^\d{4}$/.test(token)) {
+			const num = parseInt(token, 10);
+			if (num >= 2010 && num <= 2099) {
+				criteria.year = num;
+				continue;
+			}
+		}
+
 		// 数字のみ → 金額
 		if (/^\d+$/.test(token)) {
 			criteria.amounts.push(parseInt(token, 10));
@@ -113,7 +123,7 @@ export function parseSearchQuery(query: string, accounts: Account[]): SearchCrit
 		// カンマ付き数字 → 金額（例：10,000）
 		if (/^[\d,]+$/.test(token)) {
 			const amount = parseInt(token.replace(/,/g, ''), 10);
-			if (!isNaN(amount)) {
+			if (!Number.isNaN(amount)) {
 				criteria.amounts.push(amount);
 			}
 			continue;
@@ -126,10 +136,10 @@ export function parseSearchQuery(query: string, accounts: Account[]): SearchCrit
 			continue;
 		}
 
-		// 勘定科目名に部分一致（前方一致）
+		// 勘定科目名に部分一致（前方一致・部分一致）
 		let foundAccount = false;
 		for (const [name, code] of accountNameToCode) {
-			if (name.startsWith(token) || token.startsWith(name)) {
+			if (name.startsWith(token) || token.startsWith(name) || name.includes(token)) {
 				criteria.accounts.push(code);
 				foundAccount = true;
 				break;
@@ -151,8 +161,9 @@ export function filterJournals(journals: JournalEntry[], criteria: SearchCriteri
 	return journals.filter((journal) => {
 		// テキスト検索（摘要・取引先）- すべてのテキストに一致する必要がある
 		for (const text of criteria.text) {
-			const matchDesc = journal.description.toLowerCase().includes(text);
-			const matchVendor = journal.vendor.toLowerCase().includes(text);
+			const lowerText = text.toLowerCase();
+			const matchDesc = journal.description.toLowerCase().includes(lowerText);
+			const matchVendor = journal.vendor.toLowerCase().includes(lowerText);
 			if (!matchDesc && !matchVendor) return false;
 		}
 

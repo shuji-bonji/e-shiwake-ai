@@ -59,7 +59,10 @@ export function isPurchaseCategory(category: TaxCategory | undefined): boolean {
  */
 export function calculateTaxExcluded(taxIncludedAmount: number, rate: TaxRate): number {
 	if (rate === 0) return taxIncludedAmount;
-	return Math.floor(taxIncludedAmount / (1 + rate / 100));
+	// 整数演算で浮動小数点誤差を回避
+	// 例: 110000 / 1.1 → 99999.999... (NG)
+	//      110000 * 100 / 110 → 100000 (OK)
+	return Math.floor((taxIncludedAmount * 100) / (100 + rate));
 }
 
 /**

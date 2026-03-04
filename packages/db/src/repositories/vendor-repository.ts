@@ -41,10 +41,10 @@ export function getAllVendors(): Vendor[] {
 /**
  * 取引先の取得（ID指定）
  */
-export function getVendorById(id: string): Vendor | undefined {
+export function getVendorById(id: string): Vendor | null {
 	const db = getDatabase();
 	const row = db.prepare('SELECT * FROM vendors WHERE id = ?').get(id) as VendorRow | undefined;
-	return row ? rowToVendor(row) : undefined;
+	return row ? rowToVendor(row) : null;
 }
 
 /**
@@ -61,15 +61,35 @@ export function searchVendorsByName(query: string): Vendor[] {
 /**
  * 取引先の追加（名前で重複チェック）
  */
-export function saveVendor(name: string): string {
+export function saveVendor(
+	vendorOrName: string | Omit<Vendor, 'id' | 'createdAt' | 'updatedAt'>
+): string {
 	const db = getDatabase();
-	const existing = db.prepare('SELECT id FROM vendors WHERE name = ?').get(name) as { id: string } | undefined;
+	const vendor = typeof vendorOrName === 'string' ? { name: vendorOrName } : vendorOrName;
+
+	const existing = db.prepare('SELECT id FROM vendors WHERE name = ?').get(vendor.name) as
+		| { id: string }
+		| undefined;
 	if (existing) return existing.id;
 
 	const id = crypto.randomUUID();
 	const now = new Date().toISOString();
 
-	db.prepare('INSERT INTO vendors (id, name, created_at) VALUES (?, ?, ?)').run(id, name, now);
+	db.prepare(`
+		INSERT INTO vendors (id, name, address, contact_name, email, phone, payment_terms, note, created_at, updated_at)
+		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	`).run(
+		id,
+		vendor.name,
+		vendor.address ?? null,
+		vendor.contactName ?? null,
+		vendor.email ?? null,
+		vendor.phone ?? null,
+		vendor.paymentTerms ?? null,
+		vendor.note ?? null,
+		now,
+		null
+	);
 	return id;
 }
 
@@ -82,13 +102,34 @@ export function updateVendor(id: string, updates: Partial<Omit<Vendor, 'id' | 'c
 	const sets: string[] = ['updated_at = ?'];
 	const values: unknown[] = [now];
 
-	if (updates.name !== undefined) { sets.push('name = ?'); values.push(updates.name); }
-	if (updates.address !== undefined) { sets.push('address = ?'); values.push(updates.address); }
-	if (updates.contactName !== undefined) { sets.push('contact_name = ?'); values.push(updates.contactName); }
-	if (updates.email !== undefined) { sets.push('email = ?'); values.push(updates.email); }
-	if (updates.phone !== undefined) { sets.push('phone = ?'); values.push(updates.phone); }
-	if (updates.paymentTerms !== undefined) { sets.push('payment_terms = ?'); values.push(updates.paymentTerms); }
-	if (updates.note !== undefined) { sets.push('note = ?'); values.push(updates.note); }
+	if ('name' in updates) {
+		sets.push('name = ?');
+		values.push(updates.name ?? null);
+	}
+	if ('address' in updates) {
+		sets.push('address = ?');
+		values.push(updates.address ?? null);
+	}
+	if ('contactName' in updates) {
+		sets.push('contact_name = ?');
+		values.push(updates.contactName ?? null);
+	}
+	if ('email' in updates) {
+		sets.push('email = ?');
+		values.push(updates.email ?? null);
+	}
+	if ('phone' in updates) {
+		sets.push('phone = ?');
+		values.push(updates.phone ?? null);
+	}
+	if ('paymentTerms' in updates) {
+		sets.push('payment_terms = ?');
+		values.push(updates.paymentTerms ?? null);
+	}
+	if ('note' in updates) {
+		sets.push('note = ?');
+		values.push(updates.note ?? null);
+	}
 
 	values.push(id);
 	db.prepare(`UPDATE vendors SET ${sets.join(', ')} WHERE id = ?`).run(...values);

@@ -52,10 +52,12 @@ export function getAccountsByType(type: AccountType): Account[] {
 /**
  * 勘定科目の取得（コード指定）
  */
-export function getAccountByCode(code: string): Account | undefined {
+export function getAccountByCode(code: string): Account | null {
 	const db = getDatabase();
-	const row = db.prepare('SELECT * FROM accounts WHERE code = ?').get(code) as AccountRow | undefined;
-	return row ? rowToAccount(row) : undefined;
+	const row = db.prepare('SELECT * FROM accounts WHERE code = ?').get(code) as
+		| AccountRow
+		| undefined;
+	return row ? rowToAccount(row) : null;
 }
 
 /**
@@ -93,11 +95,26 @@ export function updateAccount(
 	const sets: string[] = [];
 	const values: unknown[] = [];
 
-	if (updates.name !== undefined) { sets.push('name = ?'); values.push(updates.name); }
-	if (updates.type !== undefined) { sets.push('type = ?'); values.push(updates.type); }
-	if (updates.defaultTaxCategory !== undefined) { sets.push('default_tax_category = ?'); values.push(updates.defaultTaxCategory); }
-	if (updates.businessRatioEnabled !== undefined) { sets.push('business_ratio_enabled = ?'); values.push(updates.businessRatioEnabled ? 1 : 0); }
-	if (updates.defaultBusinessRatio !== undefined) { sets.push('default_business_ratio = ?'); values.push(updates.defaultBusinessRatio); }
+	if (updates.name !== undefined) {
+		sets.push('name = ?');
+		values.push(updates.name);
+	}
+	if (updates.type !== undefined) {
+		sets.push('type = ?');
+		values.push(updates.type);
+	}
+	if (updates.defaultTaxCategory !== undefined) {
+		sets.push('default_tax_category = ?');
+		values.push(updates.defaultTaxCategory);
+	}
+	if (updates.businessRatioEnabled !== undefined) {
+		sets.push('business_ratio_enabled = ?');
+		values.push(updates.businessRatioEnabled ? 1 : 0);
+	}
+	if (updates.defaultBusinessRatio !== undefined) {
+		sets.push('default_business_ratio = ?');
+		values.push(updates.defaultBusinessRatio);
+	}
 
 	if (sets.length === 0) return;
 
@@ -110,7 +127,9 @@ export function updateAccount(
  */
 export function deleteAccount(code: string): void {
 	const db = getDatabase();
-	const row = db.prepare('SELECT is_system FROM accounts WHERE code = ?').get(code) as { is_system: number } | undefined;
+	const row = db.prepare('SELECT is_system FROM accounts WHERE code = ?').get(code) as
+		| { is_system: number }
+		| undefined;
 
 	if (row?.is_system === 1) {
 		throw new Error('システム勘定科目は削除できません');
@@ -147,10 +166,12 @@ export function generateNextCode(type: AccountType): string {
 	const db = getDatabase();
 	const prefix = CATEGORY_PREFIX[type];
 	const minCode = prefix * 1000 + 100;
-	const maxCode = prefix * 1000 + 199;
+	const maxCode = prefix * 1000 + 198;
 
 	const row = db
-		.prepare('SELECT MAX(CAST(code AS INTEGER)) as max_code FROM accounts WHERE type = ? AND CAST(code AS INTEGER) BETWEEN ? AND ?')
+		.prepare(
+			'SELECT MAX(CAST(code AS INTEGER)) as max_code FROM accounts WHERE type = ? AND CAST(code AS INTEGER) BETWEEN ? AND ?'
+		)
 		.get(type, minCode, maxCode) as { max_code: number | null };
 
 	const nextCode = row.max_code ? row.max_code + 1 : minCode;

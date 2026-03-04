@@ -14,39 +14,46 @@ import {
 
 // ==================== Zod スキーマ ====================
 
-const SearchVendorsSchema = z.object({
-	query: z.string().optional().describe('取引先名で検索（省略で全件取得）')
-}).strict();
+const SearchVendorsSchema = z
+	.object({
+		query: z.string().optional().describe('取引先名で検索（省略で全件取得）')
+	})
+	.strict();
 
-const VendorIdSchema = z.object({
-	id: z.string().describe('取引先ID（UUID）')
-}).strict();
+const VendorIdSchema = z
+	.object({
+		id: z.string().describe('取引先ID（UUID）')
+	})
+	.strict();
 
-const CreateVendorSchema = z.object({
-	name: z.string().min(1).max(100).describe('取引先名'),
-	address: z.string().optional().describe('住所'),
-	contactName: z.string().optional().describe('担当者名'),
-	email: z.string().email().optional().describe('メールアドレス'),
-	phone: z.string().optional().describe('電話番号'),
-	paymentTerms: z.string().optional().describe('支払条件'),
-	note: z.string().optional().describe('備考')
-}).strict();
+const CreateVendorSchema = z
+	.object({
+		name: z.string().min(1).max(100).describe('取引先名'),
+		address: z.string().optional().describe('住所'),
+		contactName: z.string().optional().describe('担当者名'),
+		email: z.string().email().optional().describe('メールアドレス'),
+		phone: z.string().optional().describe('電話番号'),
+		paymentTerms: z.string().optional().describe('支払条件'),
+		note: z.string().optional().describe('備考')
+	})
+	.strict();
 
-const UpdateVendorSchema = z.object({
-	id: z.string().describe('更新対象の取引先ID'),
-	name: z.string().min(1).max(100).optional().describe('取引先名'),
-	address: z.string().optional().describe('住所'),
-	contactName: z.string().optional().describe('担当者名'),
-	email: z.string().email().optional().describe('メールアドレス'),
-	phone: z.string().optional().describe('電話番号'),
-	paymentTerms: z.string().optional().describe('支払条件'),
-	note: z.string().optional().describe('備考')
-}).strict();
+const UpdateVendorSchema = z
+	.object({
+		id: z.string().describe('更新対象の取引先ID'),
+		name: z.string().min(1).max(100).optional().describe('取引先名'),
+		address: z.string().optional().describe('住所'),
+		contactName: z.string().optional().describe('担当者名'),
+		email: z.string().email().optional().describe('メールアドレス'),
+		phone: z.string().optional().describe('電話番号'),
+		paymentTerms: z.string().optional().describe('支払条件'),
+		note: z.string().optional().describe('備考')
+	})
+	.strict();
 
 // ==================== ツール登録 ====================
 
 export function registerVendorTools(server: McpServer): void {
-
 	// --- 取引先一覧/検索 ---
 	server.registerTool(
 		'eshiwake_list_vendors',
@@ -69,9 +76,7 @@ Returns:
 		},
 		async (params) => {
 			try {
-				const vendors = params.query
-					? searchVendorsByName(params.query)
-					: getAllVendors();
+				const vendors = params.query ? searchVendorsByName(params.query) : getAllVendors();
 
 				if (vendors.length === 0) {
 					const msg = params.query
@@ -95,7 +100,14 @@ Returns:
 
 				return { content: [{ type: 'text' as const, text: lines.join('\n') }] };
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -124,7 +136,11 @@ Returns:
 			try {
 				const vendor = getVendorById(params.id);
 				if (!vendor) {
-					return { content: [{ type: 'text' as const, text: `取引先ID "${params.id}" が見つかりませんでした。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `取引先ID "${params.id}" が見つかりませんでした。` }
+						]
+					};
 				}
 
 				const lines = [
@@ -144,7 +160,14 @@ Returns:
 
 				return { content: [{ type: 'text' as const, text: lines.join('\n') }] };
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -175,7 +198,14 @@ Returns:
 				const vendorId = saveVendor(params.name);
 
 				// Update with additional fields if provided
-				if (params.address || params.contactName || params.email || params.phone || params.paymentTerms || params.note) {
+				if (
+					params.address ||
+					params.contactName ||
+					params.email ||
+					params.phone ||
+					params.paymentTerms ||
+					params.note
+				) {
 					updateVendor(vendorId, {
 						address: params.address,
 						contactName: params.contactName,
@@ -186,16 +216,25 @@ Returns:
 					});
 				}
 
-				const vendor = getVendorById(vendorId);
+				const _vendor = getVendorById(vendorId);
 
 				return {
-					content: [{
-						type: 'text' as const,
-						text: `取引先を登録しました: ${params.name}（ID: ${vendorId}）`
-					}]
+					content: [
+						{
+							type: 'text' as const,
+							text: `取引先を登録しました: ${params.name}（ID: ${vendorId}）`
+						}
+					]
 				};
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -225,7 +264,11 @@ Returns:
 			try {
 				const existing = getVendorById(params.id);
 				if (!existing) {
-					return { content: [{ type: 'text' as const, text: `取引先ID "${params.id}" が見つかりませんでした。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `取引先ID "${params.id}" が見つかりませんでした。` }
+						]
+					};
 				}
 
 				updateVendor(params.id, {
@@ -239,13 +282,22 @@ Returns:
 				});
 
 				return {
-					content: [{
-						type: 'text' as const,
-						text: `取引先を更新しました: ${params.name ?? existing.name}`
-					}]
+					content: [
+						{
+							type: 'text' as const,
+							text: `取引先を更新しました: ${params.name ?? existing.name}`
+						}
+					]
 				};
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);
@@ -274,18 +326,31 @@ Returns:
 			try {
 				const existing = getVendorById(params.id);
 				if (!existing) {
-					return { content: [{ type: 'text' as const, text: `取引先ID "${params.id}" が見つかりませんでした。` }] };
+					return {
+						content: [
+							{ type: 'text' as const, text: `取引先ID "${params.id}" が見つかりませんでした。` }
+						]
+					};
 				}
 
 				deleteVendor(params.id);
 				return {
-					content: [{
-						type: 'text' as const,
-						text: `取引先を削除しました: ${existing.name}`
-					}]
+					content: [
+						{
+							type: 'text' as const,
+							text: `取引先を削除しました: ${existing.name}`
+						}
+					]
 				};
 			} catch (error) {
-				return { content: [{ type: 'text' as const, text: `エラー: ${error instanceof Error ? error.message : String(error)}` }] };
+				return {
+					content: [
+						{
+							type: 'text' as const,
+							text: `エラー: ${error instanceof Error ? error.message : String(error)}`
+						}
+					]
+				};
 			}
 		}
 	);

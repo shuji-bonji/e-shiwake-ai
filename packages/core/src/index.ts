@@ -60,9 +60,7 @@ export type {
 	BlueReturnData
 } from './types/blue-return-types.js';
 
-export {
-	AccountTypeLabels as BankAccountTypeLabels
-} from './types/blue-return-types.js';
+export { AccountTypeLabels as BankAccountTypeLabels } from './types/blue-return-types.js';
 
 export type {
 	InvoiceItem,
