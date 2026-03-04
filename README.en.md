@@ -6,6 +6,8 @@ MCP (Model Context Protocol) server for Japanese double-entry bookkeeping. Enabl
 
 Built as the AI integration layer for [e-shiwake](https://github.com/shuji-bonji/e-shiwake) — a local-first PWA for freelancers and sole proprietors in Japan.
 
+![demo](sample.gif)
+
 ## Features
 
 - **Journal Management** — Create, read, update, delete journal entries with compound entry support
@@ -56,15 +58,15 @@ Add to your `claude_desktop_config.json`:
 
 ```json
 {
-  "mcpServers": {
-    "e-shiwake": {
-      "command": "node",
-      "args": ["/path/to/e-shiwake-ai/packages/mcp-server/dist/index.js"],
-      "env": {
-        "E_SHIWAKE_DB_PATH": "/path/to/your/e-shiwake.db"
-      }
-    }
-  }
+	"mcpServers": {
+		"e-shiwake": {
+			"command": "node",
+			"args": ["/path/to/e-shiwake-ai/packages/mcp-server/dist/index.js"],
+			"env": {
+				"E_SHIWAKE_DB_PATH": "/path/to/your/e-shiwake.db"
+			}
+		}
+	}
 }
 ```
 
@@ -102,45 +104,45 @@ Covers daily expenses, business-personal splits, revenue, withholding tax, finan
 
 ### Journals
 
-| Tool | Description |
-|---|---|
-| `eshiwake_list_fiscal_years` | List available fiscal years |
-| `eshiwake_list_journals` | List journals by fiscal year |
-| `eshiwake_get_journal` | Get journal entry details |
-| `eshiwake_create_journal` | Create a new journal entry |
-| `eshiwake_update_journal` | Update a journal entry |
-| `eshiwake_delete_journal` | Delete a journal entry |
-| `eshiwake_delete_year_data` | Delete all data for a fiscal year |
+| Tool                         | Description                       |
+| ---------------------------- | --------------------------------- |
+| `eshiwake_list_fiscal_years` | List available fiscal years       |
+| `eshiwake_list_journals`     | List journals by fiscal year      |
+| `eshiwake_get_journal`       | Get journal entry details         |
+| `eshiwake_create_journal`    | Create a new journal entry        |
+| `eshiwake_update_journal`    | Update a journal entry            |
+| `eshiwake_delete_journal`    | Delete a journal entry            |
+| `eshiwake_delete_year_data`  | Delete all data for a fiscal year |
 
 ### Accounts
 
-| Tool | Description |
-|---|---|
-| `eshiwake_list_accounts` | List accounts (filterable by type) |
-| `eshiwake_get_account` | Get account details |
-| `eshiwake_create_account` | Create account (auto-numbered) |
-| `eshiwake_update_account` | Update an account |
-| `eshiwake_delete_account` | Delete account (if unused) |
+| Tool                      | Description                        |
+| ------------------------- | ---------------------------------- |
+| `eshiwake_list_accounts`  | List accounts (filterable by type) |
+| `eshiwake_get_account`    | Get account details                |
+| `eshiwake_create_account` | Create account (auto-numbered)     |
+| `eshiwake_update_account` | Update an account                  |
+| `eshiwake_delete_account` | Delete account (if unused)         |
 
 ### Vendors
 
-| Tool | Description |
-|---|---|
-| `eshiwake_list_vendors` | List/search vendors |
-| `eshiwake_get_vendor` | Get vendor details |
+| Tool                     | Description                          |
+| ------------------------ | ------------------------------------ |
+| `eshiwake_list_vendors`  | List/search vendors                  |
+| `eshiwake_get_vendor`    | Get vendor details                   |
 | `eshiwake_create_vendor` | Create vendor (deduplicates by name) |
-| `eshiwake_update_vendor` | Update a vendor |
-| `eshiwake_delete_vendor` | Delete a vendor |
+| `eshiwake_update_vendor` | Update a vendor                      |
+| `eshiwake_delete_vendor` | Delete a vendor                      |
 
 ### Reports
 
-| Tool | Description |
-|---|---|
-| `eshiwake_trial_balance` | Generate trial balance |
-| `eshiwake_profit_loss` | Generate profit & loss statement |
-| `eshiwake_balance_sheet` | Generate balance sheet |
-| `eshiwake_tax_summary` | Generate consumption tax summary |
-| `eshiwake_export_data` | Export data as JSON |
+| Tool                     | Description                      |
+| ------------------------ | -------------------------------- |
+| `eshiwake_trial_balance` | Generate trial balance           |
+| `eshiwake_profit_loss`   | Generate profit & loss statement |
+| `eshiwake_balance_sheet` | Generate balance sheet           |
+| `eshiwake_tax_summary`   | Generate consumption tax summary |
+| `eshiwake_export_data`   | Export data as JSON              |
 
 ## Package Structure
 
@@ -178,16 +180,16 @@ With the e-shiwake MCP server connected, use trigger phrases like:
 
 ### Test Phases
 
-| Phase | Description | Tests |
-|---|---|---|
-| 0 | Pre-check (fiscal years, accounts) | 1 |
-| 1 | Journal CRUD (create → get → update → delete) | 5 |
-| 2 | Compound entries + data seeding | 5 |
-| 3 | Financial reports (trial balance, P/L, B/S, tax) | 4 |
-| 4 | Vendor CRUD | 5 |
-| 5 | Account CRUD | 4 |
-| 6 | Data export | 1 |
-| 7 | Cleanup (delete test data) | 2 |
+| Phase | Description                                      | Tests |
+| ----- | ------------------------------------------------ | ----- |
+| 0     | Pre-check (fiscal years, accounts)               | 1     |
+| 1     | Journal CRUD (create → get → update → delete)    | 5     |
+| 2     | Compound entries + data seeding                  | 5     |
+| 3     | Financial reports (trial balance, P/L, B/S, tax) | 4     |
+| 4     | Vendor CRUD                                      | 5     |
+| 5     | Account CRUD                                     | 4     |
+| 6     | Data export                                      | 1     |
+| 7     | Cleanup (delete test data)                       | 2     |
 
 Uses fiscal year **2099** for test data isolation — no impact on real data.
 
@@ -226,8 +228,8 @@ pnpm run check
 
 ## Environment Variables
 
-| Variable | Description | Default |
-|---|---|---|
+| Variable            | Description                  | Default        |
+| ------------------- | ---------------------------- | -------------- |
 | `E_SHIWAKE_DB_PATH` | Path to SQLite database file | `e-shiwake.db` |
 
 ## License
