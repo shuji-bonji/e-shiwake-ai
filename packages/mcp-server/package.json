@@ -1,6 +1,6 @@
 {
 	"name": "@e-shiwake/mcp-server",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "e-shiwake MCP server - AI-powered accounting tools via Model Context Protocol",
 	"type": "module",
 	"main": "dist/index.js",

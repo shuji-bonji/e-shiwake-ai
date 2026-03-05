@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-03-06
+
+### Added
+
+- **仕訳検索ツール** `eshiwake_search_journals` — 摘要・取引先のキーワード検索、年度フィルタ対応
+
+### Changed
+
+- **パフォーマンス最適化**
+  - N+1 クエリ解消: `getJournalsByYear` / `getAllJournals` で仕訳明細を一括取得し `Map` でグルーピング
+  - SQLite インデックス追加: `idx_journals_vendor`, `idx_journal_lines_type_account`（帳簿集計の高速化）
+  - Prepared Statement キャッシュ: `journal-repository.ts` で DB インスタンス変更検知付きのモジュールレベルキャッシュを導入
+  - `searchJournals` リポジトリ関数を `@e-shiwake/db` から公開
+
 ## [0.1.0] - 2026-03-05
 
 ### Added
@@ -48,4 +62,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ビルドスクリプト: core → db → mcp-server の依存順ビルド
 - テストスクリプト: 全パッケージ一括実行
 
+[0.1.1]: https://github.com/shuji-bonji/e-shiwake-ai/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/shuji-bonji/e-shiwake-ai/releases/tag/v0.1.0

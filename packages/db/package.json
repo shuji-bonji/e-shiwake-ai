@@ -1,6 +1,6 @@
 {
 	"name": "@e-shiwake/db",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "e-shiwake database layer - SQLite repositories for accounting data",
 	"type": "module",
 	"main": "dist/index.js",

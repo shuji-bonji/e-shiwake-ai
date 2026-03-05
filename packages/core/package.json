@@ -1,6 +1,6 @@
 {
 	"name": "@e-shiwake/core",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "e-shiwake core business logic - types, accounting calculations, tax utilities",
 	"type": "module",
 	"main": "dist/index.js",
