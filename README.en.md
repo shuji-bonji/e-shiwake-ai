@@ -1,5 +1,16 @@
 # e-shiwake-ai
 
+> [!IMPORTANT]
+> **This repository has been archived (July 2026)**
+>
+> e-shiwake v0.5.0 now ships an in-app **AI chat (LLM assistant)** with a browser-side agent loop that operates directly and safely on production data (IndexedDB), so this repository has fulfilled its role.
+>
+> - The SQLite database here was a replica of the production IndexedDB data with no synchronization mechanism
+> - The browser-external agent path (stdio MCP for Claude Desktop / Code, etc.) is expected to be superseded by WebMCP standardization
+> - Feel free to use this as a reference implementation of a TypeScript × ESM × MCP SDK monorepo (Zod validation, repository pattern, double-entry bookkeeping logic)
+>
+> 👉 Successor: [e-shiwake AI chat](https://shuji-bonji.github.io/e-shiwake/help/llm-chat) ([design doc](https://github.com/shuji-bonji/e-shiwake/blob/main/docs/design/llm-chat.md))
+
 [日本語](./README.md)
 
 MCP (Model Context Protocol) server for Japanese double-entry bookkeeping. Enables AI agents like Claude to manage journal entries, chart of accounts, vendors, and generate financial reports through natural language.

@@ -1,5 +1,16 @@
 # e-shiwake-ai
 
+> [!IMPORTANT]
+> **このリポジトリはアーカイブされました（2026-07）**
+>
+> e-shiwake 本体 v0.5.0 で、ブラウザ内エージェントループによる **AI チャット（LLM アシスタント）** が実装され、本番データ（IndexedDB）を直接・安全に操作できるようになったため、本リポジトリの役割は終了しました。
+>
+> - 本リポジトリの SQLite は本番データ（IndexedDB）の複製であり、同期機構を持たない構造的制約がありました
+> - ブラウザ外エージェント（Claude Desktop / Code 等の stdio MCP 接続）の経路は、将来的に WebMCP の標準化で代替される見込みです
+> - TypeScript × ESM × MCP SDK のモノレポ実装（Zod バリデーション、リポジトリパターン、複式簿記ロジック）の参照実装としてはご自由にお使いください
+>
+> 👉 後継: [e-shiwake AI チャット](https://shuji-bonji.github.io/e-shiwake/help/llm-chat)（[設計ドキュメント](https://github.com/shuji-bonji/e-shiwake/blob/main/docs/design/llm-chat.md)）
+
 [English](./README.en.md)
 
 日本の複式簿記に対応した MCP（Model Context Protocol）サーバーです。Claude などの AI エージェントから、仕訳入力・勘定科目管理・取引先管理・帳簿生成を自然言語で操作できます。
